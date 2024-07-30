@@ -1,0 +1,84 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border box;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+#unOrderedList {
+    display: flex;
+     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#unOrderedList li {
+    text-decoration: none;
+}
+
+#greetingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.greetingTextContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.namedPerson, .greeting {
+    margin: 0;
+}
+
+.greetingTextContainer p {
+    font-size: 20px;
+    max-width: 700px;
+     /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+#introductionContainer {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure {
+       border: 1px solid black;
+    max-width: 300px;
+    min-width: 290px;
+    min-height: 300px;
+    /* /* margin: 0; */
+}
+
+.subTitle {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.aboutMeContainer {
+    margin: 0 20px;
+}
+
+.aboutMeEl {
+    font-size: 18px;
+}
+
