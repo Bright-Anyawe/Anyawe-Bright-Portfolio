@@ -17,13 +17,13 @@
         <img src='' alt=''> This is a logo element
       </div>
 
-      <ul id="unOrderedList">
-        <li> Home<li>  
-        <li> About<li>  
-        <li> Projects<li>  
-        <li>Contact Me <li>  
+      <nav id="navList">
+        <button> Home<button>  
+        <button> About<button>  
+        <button> Projects<button>  
+        <button>Contact Me <button>  
     
-      </ul>
+      </nav>
   </header>
 
   <main>
@@ -32,11 +32,11 @@
 
     <div class='greetingTextContainer'> 
 
-      <p >Hi </p>
-      <h1 class='namedPerson'>  am Bright Anyawe</h1>
+      <p class='hi' >Hi, am </p>
+      <h1 class='namedPerson'>  Bright Anyawe</h1>
       <p> 
             Looking for someone who is dedicated and enjoy doing his work as a web developer? You are on the right site.
-            I can help you buil projects, features, or website.
+            I can help you build projects, features, or website.
              Look through my work and see my innovation! if you are interested. I am available for hire.
 
         </p>
@@ -58,10 +58,10 @@
       <div>
 
           <div class='aboutMeContainer'>
-            <h1 class='subTitle'> About Me</h1>
+             <h1 class='subTitle'> <span> ^ </span> About Me <span> ^ </span> </h1>
 
 
-            <h3> Introduction<h3>
+              <h3> Introduction</h3>
               <p class='aboutMeEl'> My name is Adonu Bright Anyawe, I'm a front-end developer in Ghana.
                 I spend most of my time studying in other to improve upon my skills, using codes to solve real world problem
                 which is one of things I love to do 
@@ -96,90 +96,218 @@
           </div>
       
          </div>  
-        </section>
+    </section>
 
     <section class="experience"> 
-       <h3> 
+        <!--       
+      <div class='space'> 
+
+        <p> </p>
+
+      </div> -->
+
+      <div class='experienceDescriptionContainer'>
+         <h3> 
          My experience as a developer
        </h3>
 
-        <div> 
+        <div class='experienceDescription'> 
           A little tit bit about my growth as a developer 
           is self taught, with massive help from the Odin project curreculum
            which has helped me progress through my jorney as a with valuable experience, of which am presenting to you
       </div>
+
+      </div>
   
-          <div> 
+        
+    </section>
+
+    <section class='courseContainer'>
+         <div> 
 
                  <p class='studiesRange'> 
 
-                          </p>
+                 </p>
 
-         <img class='logo'> 
-        </img> 
+          </div>
+                
+                <img class='logo'> 
+      
+                </img> 
        
-        <div> 
-        <p> The Odin Project <br> Remote Developer course</p>
+        <div class='courseInfo'> 
+          <h4> The Odin Project </h4>
+          <p class='subject'> Remote Developer course</p>
 
           <p>Skill developed from the odin project is based on javascript, css and html with framework like github,
           I  have acquired knowlegde in data structures and algorithms </p>
 
         </div>
 
-         <img> 
+        <figure class='courseImgContainer'>
+            <img> 
 
-        </img>
+            </img>
+        </figure>
 
-          </div>
 
 
     </section>
 
-    <section class='projects'> 
-                        <h3> FEATURED WORK</h3>
-                      <p> A curated collection of my most except</p>
+    <section class='featuredProject'> 
+                  <div class='captionContainer'> 
+        
+                       <div class='caption'> 
+                         <h3> FEATURED WORK</h3>
+                      <p> A curated collection of my most exceptional project</p>
+                       </div>
 
-                     <div>
+                  </div>
+                      
+
+                <div>
        
                       <p> A real world to do list that help users to track their daily todos,
-         allowing users to create different project with it relative to dos
-       </p>
+                              allowing users to create different project with it relative to dos
+                      </p>
 
-       <button> <a href= '#'>Live Website</a> </button>
-       <button> <a href= '#'>View on Github </a> </button>
+                      <div class='deviceLayout'>
+                        
+                        <figure> 
+                          <img class='showDesktop' src='' alt='Image for desktop layout'> 
+                          
+                        </figure>
+                        
+                        <figure> 
+                          <img class='showMobile' src='' alt='Image for mobile layout'>
+                          
+                        </figure>
+                      </div>
+                           
+                      <div class='buttons'> 
+                           <button> <a href= '#'>Live Website</a> </button>
+                            <button> <a href= '#'>View on Github </a> </button>
+                      </div>
 
-        <div> 
-          <img class='showDesktop'> 
-          <img class='showMobile'>
-          <div>
-        </div>
+                    </div> 
+
 
     </section>
 
-      <section>
-            <div> 
-                    <h3>CONTACT ME </h3>
+     <section class='otherProjectsContainer'> 
+
+                  <div class='projectHeaderContainer'> 
+        
+                       <div class='projectHeader'> 
+                         <h2> More Projects</h2>
+                      <p> A curated collection of my most except</p>
+                       </div>
+
+                  </div>
+                      
+
+                <div>
+       
+
+                      <div class='projectContainer'>
+
+                        <div class='firstProject'>
+                        
+                      
+                        </div>
+
+                        <div class='secondProject'>
+                        
+                      
+                        </div>
+
+                        <div class='thirdProject'>
+                        
+                      
+                        </div>
+                      
+                        </div>
+                           
+                     
+
+                    </div> 
+
+
+    </section>
+
+
+      <section class='contactContainer'>
+            <div class='contactCaption'> 
+                    <h2>CONTACT ME </h2>
 
                     <p> You might want to develop a website, application or discuss anything related. Take a break to leave a message below
-                 </div>
+             </div>
 
               <form> 
                   <p> Name</p>
-                                          <input placeholder='Name'>
+                            <input type='text' placeholder='Name'>
 
         <p> Email</p>
           <input type='emal' placeholder='Email'>
 
               <p> Message</p>
-              <textfield placeholder='Message'> </textfield>
+              <textarea placeholder='Message'>Message </textarea>
 
-                      <input type='submit' placeholder='Send'>
+                      <div class='sendBtnContainer'>
+
+                        <input class='submit' type='submit' placeholder='Send'>
+                      </div>
           </form>
 
       </section>
 
 <footer> 
-  
+  <div class='logoContainer'>
+    <p>
+    
+    Logo will be here
+    </p>
+    
+    <div>
+    Night mode will be here
+    
+    </div>
+
+  </div>
+
+  <div class='tweetLogoContainer'>
+    
+    <p>
+    
+    
+    </p>
+
+  </div>
+
+  <div class='githublogoContainer'>
+    <p>
+    
+        Github logo will be here
+
+    </p>
+    <p>
+    GitHub
+    
+    </p>
+    
+  </div>
+
+  <div class='gmailLogoContainer'>
+    <p>
+    
+    Gmail logo will be here
+    </p>
+    <p>
+    Gmail
+    
+    </p>
+    
+  </div>
   
   <footer>
 
