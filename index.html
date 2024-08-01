@@ -181,7 +181,7 @@
                       <p class='aboutFeaturedWork'> A real world to do list that help users to track their daily todos, store
                                and allow them to create different project with it relative to-dos
                       </p>
-                      
+
                       <img class='showMobile' src='' alt='Image for mobile layout'>
 
                       <div class='deviceLayout'>
@@ -223,18 +223,37 @@
 
                       <div class='projectContainer'>
 
-                        <div class='firstProject'>
-                        
+                        <div class='firstProject container'>
+
+                            <div class='firstProject mobileScreen'>
+                            
+                          
+                            </div>
+
+                            
+                          <p> I can create a feature for you</p>
                       
                         </div>
 
-                        <div class='secondProject'>
+                        <div class='secondProject container'>
                         
+                            <div class='secondProject mobileScreen'>
+                          
+                        
+                            </div>
+
+                            <p>I can create a feature for you, check if you like it </p>
                       
                         </div>
 
-                        <div class='thirdProject'>
-                        
+                        <div class='thirdProject container'>
+                          
+                                <div class='thirdProject mobileScreen'>
+                              
+                            
+                              </div>
+
+                              <p>This will you achieve you task </p>
                       
                         </div>
                       
@@ -248,33 +267,33 @@
     </section>
 
 
-      <section class='contactContainer'>
-            <div class='contactCaption'> 
+      <section class='contactContainer contactContainerMobile'>
+            <div class='contactCaption contactHeadCaptionMobile'> 
                     <h2>CONTACT ME </h2>
 
                     <p class='contactPEl'> You might want to develop a website, application or discuss anything related. Take a break to leave a message below
              </div>
 
-              <form> 
-                  <p> Name</p>
-                            <input type='text' placeholder='Name'>
+              <form class='formEl mobileFormContainer'> 
+                        <p> Name</p>
+                                  <input class='mobileNameInputEl' type='text' placeholder='Name'>
 
-        <p> Email</p>
-          <input type='emal' placeholder='Email'>
+                  <p> Email</p>
+                    <input type='email' class='mobileEmailInputEl' placeholder='Email'>
 
-              <p> Message</p>
-              <textarea placeholder='Message'>Message </textarea>
+                    <p> Message</p>
+                    <textarea class='mobileTextAreaInputEl'placeholder='Message'> </textarea>
 
-                      <div class='sendBtnContainer'>
+                      <div class='sendBtnContainer mobileSendBtnContainer'>
 
-                        <input class='submit' type='submit' placeholder='Send'>
+                        <button class='submit mobileSubmitInputEl' type='submit' placeholder='Send'>Send </button>
                       </div>
           </form>
 
       </section>
 
 <footer> 
-  <div class='logoContainer'>
+  <div class='logoContainer mobileLogoContainer'>
     <p>
     
     Logo will be here
@@ -287,20 +306,25 @@
 
   </div>
 
-  <div class='tweetLogoContainer'>
+  <div class='tweetLogoContainer mobileTweetLogoContainer'>
     
+    <div class='close'> 
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+       </div> 
     <p>
-    
-    
+    X
     </p>
 
   </div>
 
-  <div class='githublogoContainer'>
+  <div class='githublogoContainer mobileGithublogoContainer'>
     <p>
     
-        Github logo will be here
-
+      <svg class="addTask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>plus</title>
+                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                        </svg>
     </p>
     <p>
     GitHub
@@ -309,11 +333,13 @@
     
   </div>
 
-  <div class='gmailLogoContainer'>
+  <div class='gmailLogoContainer mobileGmailLogoContainer'>
     <p>
     
-    Gmail logo will be here
-    </p>
+                      <svg class="addTask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <title>plus</title>
+                            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                        </svg>    </p>
     <p>
     Gmail
     
