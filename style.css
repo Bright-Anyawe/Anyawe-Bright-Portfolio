@@ -2,26 +2,735 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border box;
+    /* font-family: 'arial' */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
 }
 
+:root {
+    --logo-color: rgb(76.470588%, 0%, 18.431373%);
+}
+
+@media(max-width: 500px) {
+    body header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: arial;
+        margin: 20px;
+    }
+
+
+    header .mobileScreenPortfolioLogo svg {
+        width: 78px;
+        height: 100px;
+    }
+
+    header #navList {
+        display: none;
+    }
+
+    header .mobileSvgMenuContainer {
+        display: block;
+    }
+
+    body main {
+        font-family: arial;
+    }
+
+
+    main .greetingContainer {
+        /* display: flex;
+            justify-content: center;
+             align-items: center; */
+    }
+
+    .greetingTextContainer .hi {
+        position: relative;
+        right: 8rem;
+
+        margin: 27px 0 0 0;
+    }
+
+    .greetingTextContainer .namedPerson {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        max-width: 200px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .greetingContainer .greetingTextContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .greetingTextContainer .briefIntro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    .greetingContainer .btnContainer {
+        margin: 0 0 3rem 0;
+    }
+
+    .greetingContainer .btnContainer button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+
+    .introductionContainer .subTitleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introductionContainer .mobileScreenIntroEl {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .introductionContainer .developerImage {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .introductionContainer .developerImage img {
+        max-width: 300px;
+        margin: 0;
+    }
+
+    /* .subTitleContainer .subTitle {
+
+            } */
+
+    .aboutMeContainer {
+        margin: 0 0 0 50px;
+    }
+
+    .aboutMeContainer .introHeaderText {
+        margin: 1rem 0 10px 0;
+    }
+
+    .aboutMeContainer .aboutMeEl {
+        margin: 12px 0 1rem 0;
+    }
+
+    .aboutMeContainer .aboutGoals {
+        font: 18px 'Arial';
+    }
+
+    .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
+    .briefNote, .aboutFeaturedWork, .contactPEl {
+        max-width: 300px;
+    }
+
+    .langTechToolContainer {
+        margin: 0 0 0 50px;
+
+    }
+
+    .experienceEl .experienceDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experienceDescriptionContainer .experienceDescription {
+        text-align: center;
+    }
+
+    main .courseContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .courseInfo .subHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .courseInfo .subHeader>h3, .featuredProjectHeadcaption>h3,
+    .projectHeader h2, .contactHeadCaptionMobile>h2, .mobileFormContainer {
+        margin: 60px 0 10px 0;
+    }
+
+    .subject, .contactHeadCaptionMobile .contactPEl {
+        text-align: center;
+        margin: 0;
+    }
+
+    .skill {
+        text-align: center;
+
+        font: 16px 'Arial'
+    }
+
+    .courseInfo .mobileScreenLogo {
+        min-width: 250px;
+        max-width: 294px;
+        min-height: 200px;
+        object-fit: contain;
+    }
+
+    .courseContainer .courseInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .courseContainer .courseImgContainer {
+        display: none;
+    }
+
+    main .featuredProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .captionContainer, .subFeaturedProjectContainer .aboutFeaturedWork,
+    .otherProjectsContainer .projectHeaderContainer {
+        text-align: center;
+    }
+
+    .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
+        margin: 0 0 10px 0;
+    }
+
+    .featuredProject .subFeaturedProjectContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font: 16px 'Arial'
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showDesktop {
+        display: block;
+        border: 1px solid black;
+        min-width: 250px;
+        max-width: 272px;
+        min-height: 200px;
+        max-height: 222px;
+        border-radius: 9px;
+        padding: 10px;
+
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showMobile {
+        display: block;
+        border: 1px solid black;
+        max-width: 100px;
+        min-height: 200px;
+        max-height: 210px;
+        border-radius: 9px;
+        padding: 10px;
+        margin: 0 0 20px 0;
+    }
+
+    .subFeaturedProjectContainer .deviceLayout {
+        display: none;
+    }
+
+
+    .subFeaturedProjectContainer .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .subFeaturedProjectContainer .buttons>button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+    main .otherProjectsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectContainer .mobileScreen {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border: 1px solid black;
+        min-width: 250px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+        background-image: url('asset/image/Dashboard.jpg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem
+    }
+
+    .firstProjectContainer p, .secondProjectContainer p,
+    .thirdProjectContainer p {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .contactContainerMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactHeadCaptionMobile, .mobileSendBtnContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileFormContainer input {
+        min-width: 230px;
+        min-height: 25px;
+        max-width: 250px;
+        max-height: 30px;
+        border-radius: 5px;
+    }
+
+    .mobileTextAreaInputEl {
+        min-height: 80px;
+        min-width: 230px;
+        max-width: 300px;
+        border-radius: 5px;
+
+    }
+
+    .mobileFormContainer>p {
+        margin: 16px 0 0 0;
+    }
+
+    .mobileSendBtnContainer>button .mobileSubmitInputEl {
+        display: flex;
+        align-items: center;
+        margin: 16px 0 0 0;
+        height: 50px;
+        padding: 10px;
+        font-size: 19px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 9px;
+    }
+
+    .mobileSendBtnContainer>button .mobileSubmitInputEl svg {
+        fill: rgb(73, 73, 197)
+    }
+
+
+    .mobileLogoContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .mobileGithublogoContainer, .mobileGmailLogoContainer, .mobileTweetLogoContainer {
+        display: flex;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    body header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* font-size: 40px;
+                margin: 10px 0 5rem 0; */
+        font-family: arial;
+    }
+
+    header #navList {
+        /* display: none; */
+    }
+
+    body main {
+        font-family: arial;
+    }
+
+    /* #greetingContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    /* 
+    .greetingTextContainer .hi {
+        position: relative;
+        right: 8rem;
+
+        margin: 27px 0 0 0;
+    }
+
+    .greetingTextContainer .namedPerson {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        max-width: 200px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .greetingContainer .greetingTextContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .greetingTextContainer .briefIntro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    .greetingContainer .btnContainer {
+        margin: 0 0 3rem 0;
+    }
+
+    .greetingContainer .btnContainer button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+
+    .aboutMeContainer {
+        margin: 0 0 0 50px;
+    }
+
+    .aboutMeContainer .introHeaderText {
+        margin: 1rem 0 10px 0;
+    }
+
+    .aboutMeContainer .aboutMeEl {
+        margin: 12px 0 1rem 0;
+    }
+
+    .aboutMeContainer .aboutGoals {
+        font: 18px 'Arial';
+    }
+
+    .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
+    .briefNote, .aboutFeaturedWork, .contactPEl {
+        max-width: 300px;
+    }
+
+    .langTechToolContainer {
+        margin: 0 0 0 50px;
+
+    }
+
+    .experienceEl .experienceDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experienceDescriptionContainer .experienceDescription {
+        text-align: center;
+    }
+
+    main .courseContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .courseInfo .subHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .courseInfo .subHeader>h3, .featuredProjectHeadcaption>h3,
+    .projectHeader h2, .contactHeadCaptionMobile>h2, .mobileFormContainer {
+        margin: 50px 0 10px 0;
+    }
+
+    .subject, .contactHeadCaptionMobile .contactPEl {
+        text-align: center;
+        margin: 0;
+    }
+
+    .skill {
+        text-align: center;
+        min-width: 500px;
+        font: 16px 'Arial'
+    }
+
+    .courseInfo .logo {
+        min-width: 250px;
+        min-height: 200px;
+    }
+
+    .courseContainer .courseInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .courseContainer .courseImgContainer {
+        display: block;
+    }
+
+    main .featuredProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .captionContainer, .subFeaturedProjectContainer .aboutFeaturedWork,
+    .otherProjectsContainer .projectHeaderContainer {
+        text-align: center;
+    }
+
+    .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
+        margin: 0 0 10px 0;
+    }
+
+    .featuredProject .subFeaturedProjectContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font: 16px 'Arial'
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showDesktop {
+        border: 1px solid black;
+        min-width: 250px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showMobile {
+        border: 1px solid black;
+        max-width: 100px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+
+    .subFeaturedProjectContainer .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .subFeaturedProjectContainer .buttons>button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+    main .otherProjectsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectContainer .mobileScreen {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border: 1px solid black;
+        min-width: 250px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem
+    }
+
+    .firstProject.container p, .secondProject.container p,
+    .thirdProject.container p {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .contactContainerMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactHeadCaptionMobile, .mobileSendBtnContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileFormContainer input {
+        min-width: 230px;
+        min-height: 25px;
+        max-width: 250px;
+        max-height: 30px;
+        border-radius: 5px;
+    }
+
+    .mobileTextAreaInputEl {
+        min-height: 80px;
+        min-width: 250px;
+        max-width: 300px;
+        border-radius: 5px;
+
+    }
+
+    .mobileFormContainer>p {
+        margin: 16px 0 0 0;
+    }
+
+    .mobileSubmitInputEl {
+        margin: 16px 0 0 0;
+        width: 100px;
+        max-width: 120px;
+        height: 35px;
+        font-size: 19px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 9px;
+    }
+
+    .mobileLogoContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .mobileGithublogoContainer, .mobileGmailLogoContainer, .mobileTweetLogoContainer {
+        display: flex;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
 header {
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 20px;
+    margin: 10px 0 5rem 0; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: arial;
+    margin: 20px;
 
 }
 
-#unOrderedList {
+.portfolioLogo svg {
+    width: 90px;
+    height: 100px;
+}
+
+.comma {
+    font-weight: 700;
+    color: var(--logo-color);
+}
+
+.menuSvgContainer {
+    display: none;
+}
+
+#navList {
     display: flex;
-     justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
-#unOrderedList li {
-    text-decoration: none;
+#navList button {
+    border: none;
+    padding: 10px;
+    background-color: var(--logo-color);
+    border-radius: 9px;
+    color: white;
+    font-weight: 700;
 }
+
+
 
 #greetingContainer {
     display: flex;
@@ -44,41 +753,398 @@ header {
     margin: 0;
 }
 
+.namedPerson {
+    font-size: 80px;
+}
+
+.hi {
+    position: relative;
+    right: 17rem;
+    margin: 0;
+}
+
 .greetingTextContainer p {
-    font-size: 20px;
+    font-size: 17px;
     max-width: 700px;
-     /* display: flex;
+
+    /* display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; */
 }
 
-#introductionContainer {
-       display: flex;
+.btnContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.btnContainer button {
+    border: none;
+    /* border: 1px solid var(--logo-color); */
+    background-color: var(--logo-color);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+button.ResumeBtn {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.ResumeBtn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+
+
+.introductionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 figure {
-       border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.figurePlusLeft, .figurePlusRight {
+    position: relative;
+    top: 10rem;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.developerImage img {
     max-width: 300px;
     min-width: 290px;
     min-height: 300px;
-    /* /* margin: 0; */
+    object-fit: cover;
 }
 
 .subTitle {
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .aboutMeContainer {
     margin: 0 20px;
 }
 
+span {
+    color: var(--logo-color);
+    /* background-color: brown; */
+    border-radius: 10px;
+    transform: rotate(180deg);
+    transform: scale3d(1.9);
+
+}
+
 .aboutMeEl {
     font-size: 18px;
 }
 
+.identity {
+    color: black;
+    font-weight: 700;
+}
+
+.experienceEl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.space {
+    min-width: 350px;
+    min-height: 300px
+}
+
+.experienceDescriptionContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experienceDescription {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+}
+
+.courseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+.studiesRange {
+    border: 1px solid black;
+}
+
+.courseImgContainer {
+    min-height: 350px;
+    min-width: 550px;
+    transform: rotate(-0.7deg);
+    transform: skewX(-8deg);
+    transform: skew(12deg, -2deg);
+    background-image: url('asset/image/portfolio tablet.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.courseInfoContainer h4, .subject {
+    margin: 0;
+}
+
+.featuredProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo, .mobileResponsive, .showMobile {
+    display: none;
+}
+
+
+
+.deviceLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.desktopImageContainer {
+    background-image: url('asset/image/To-do-project-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 7px;
+    max-width: 400px;
+    min-width: 350px;
+    min-height: 200px;
+}
+
+.mobileImageContainer {
+    background-image: url('asset/image/To-do project-mobile.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 200px;
+    min-width: 100px;
+    min-height: 180px;
+    border: 1px solid black;
+    border-radius: 7px;
+
+
+}
+
+.featuredProjectHeadcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px 0 0 0;
+
+}
+
+.buttons button {
+    padding: 5px;
+    font-size: 17px;
+}
+
+.otherProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectHeader h2 {
+    margin: 80px 0 0 0;
+}
+
+.projectContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.desktopScreen {
+    background-image: url('asset/image/Screenshot (4).png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    min-height: 200px;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.contactCaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactCaption h2 {
+    margin: 70px 0 10px 0;
+}
+
+.contactCaption p {
+    max-width: 500px;
+    text-align: center;
+    margin: 0;
+}
+
+form input {
+    padding: 10px;
+    min-width: 360px;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 80px;
+    min-width: 380px;
+}
+
+.sendBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    max-width: 100px;
+    min-width: 80px;
+    height: 40px;
+    background-color: var(--logo-color);
+    ;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+}
+
+.submit :nth-child(2), .submit :nth-child(1) {
+    margin: 0;
+}
+
+.submit svg {
+    width: 25px;
+    height: 17px;
+    fill: white;
+
+}
+
+footer {
+    margin: 6rem 0 0 0;
+    border-top: 1px solid black;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer svg {
+
+    width: 80px;
+    height: 80px;
+}
+
+.socialMediaSvgContainer svg {
+    width: 30px;
+    height: 40px;
+}
+
+.socialMediaSvgContainer li>p {
+    margin: 0;
+}
+
+.tweetLogoContainer {
+    display: flex;
+}
+
+.githublogoContainer, .gmailLogoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.socialMediaElContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socialMediaEl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
