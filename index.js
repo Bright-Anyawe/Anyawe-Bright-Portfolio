@@ -8,14 +8,19 @@ const menuSvg = document.querySelector(".menuSvgContainer");
 const body = document.querySelector("body");
 let prevScrollPos = window.scrollY;
 
+
+//Hide nav elemnt when user scroll down and and display it when scroll up
 window.onscroll = function () {
   let currentScrollPos = window.scrollY;
-  if (prevScrollPos > currentScrollPos) {
-    document.querySelector("nav").style.top = "0";
-  } else {
-    document.querySelector("nav").style.top = "-80px";
-    // document.querySelector(".sidebar").style.display = "flex";
-  }
+
+    
+      if (prevScrollPos > currentScrollPos) {
+        document.querySelector("nav").style.top = "0";
+      } else {
+        document.querySelector("nav").style.top = "-80px";
+        // document.querySelector(".sidebar").style.display = "flex";
+    }
+    prevScrollPos = currentScrollPos
 };
 
 

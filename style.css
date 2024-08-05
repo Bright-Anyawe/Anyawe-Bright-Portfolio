@@ -29,25 +29,31 @@ body {
         height: 100px;
     }
 
-    /* 
-    header #navList .secondSideBar {
-        display: none;
-    
-    } */
 
     header #navList li>a {
         text-decoration: none;
         color: rgb(240, 14, 14);
         background-color: transparent;
         padding: 0;
+        /* transition: all 1s ease-out; */
+        transition: display 3s easeInOutQuad 1s;
+        transition-behavior: allow-discrete;
 
     }
 
     #navList {
         display: none;
         border-radius: 7px;
+
+
     }
 
+
+    @starting-style {
+        .showing {
+            opacity: 0;
+        }
+    }
 
     #navList .sidebar {
         position: fixed;
@@ -61,23 +67,9 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         border-radius: 9px 0 0 9px;
-        transition: width 0.3s ease-in-out;
-        
+
 
     }
-
-    /* 
-    .active_box {
-        opacity: 1;
-        left: 0px;
-        pointer-events: fill;
-    } */
-
-    /*  */
-    /* .sidebar li, .sidebar a {
-        width: 100%;
-
-    } */
 
     .sidebar li {
         border: none;
@@ -89,6 +81,10 @@ body {
 
     }
 
+    .sidebar li:focus, .sidebar li:active {
+        background-color: #fff;
+        color: #333;
+    }
 
     header .mobileSvgMenuContainer {
         display: block;
@@ -389,7 +385,7 @@ body {
 
     .mobileTextAreaInputEl {
         min-height: 80px;
-        min-width: 230px;
+        min-width: 248px;
         max-width: 300px;
         border-radius: 5px;
 
@@ -780,6 +776,7 @@ header {
 .portfolioLogo svg {
     width: 90px;
     height: 100px;
+
 }
 
 .comma {
@@ -811,6 +808,7 @@ nav ul {
     width: 100%;
     list-style: none;
     display: flex;
+    max-width: 100%;
     justify-content: flex-end;
     align-items: center;
 
@@ -830,6 +828,7 @@ nav a {
     align-items: center;
     color: black;
 }
+
 
 #navList li>a {
     text-decoration: none;
@@ -1256,6 +1255,8 @@ svg {
 
     width: 80px;
     height: 80px;
+    transform: rotate(180deg);
+
 }
 
 .socialMediaSvgContainer svg {
