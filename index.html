@@ -36,12 +36,23 @@
     <div class="menuSvgContainer mobileSvgMenuContainer">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>    </div>
     <nav id="navList">
-      
-      <button> Home</button>
-      <button> About</button>
-      <button> Projects</button>
-      <button>Contact Me </button>
+      <ul class='sidebar'>
+        
+        <li class="navlinks"> <a href="#">HOME</a>  </li>
+        <li class="navlinks"> <a href="#personalInfo">ABOUT</a> </li>
+        <li class="navlinks"> <a href="#challenge">PROJECT</a> </li>
+        <li class="navlinks"> <a href="#myContact">CONTACT ME</a> </li>
 
+      </ul>
+
+      <!-- <ul class='secondSideBar'>
+        
+      <li> <a href="#">HOME</a>  </li>
+      <li> <a href="#personalInfo">ABOUT</a> </li>
+      <li> <a href="#challenge">PROJECT</a> </li>
+      <li> <a href="#myContact">CONTACT ME</a> </li>
+
+      </ul> -->
       </nav>
   </header>
 
@@ -63,15 +74,15 @@
         <div class='btnContainer'>
           <button> Check out my work</button>
 
-          <button class="ResumeBtn">
-             <p>Resume</p> 
+          <button class="ResumeBtn"> 
+             <p><a href="asset/Files/Resume.docx">Resume</a></p> 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>download</title><path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" /></svg>
             </button>
         </div>
       </div>
     </section>
 
-    <section class='introductionContainer'>
+    <section class='introductionContainer ' id="personalInfo">
 
       <div class='subTitleContainer'>
         <h1 class='subTitle'> <span> + </span> ABOUT ME <span> + </span> </h1>
@@ -81,9 +92,9 @@
 
       <div class='introduction mobileScreenIntroEl'>
 
-        <figure class='developerImage'>  <span class='figurePlusLeft'>+</span>
+        <figure class='developerImage'>  <span class='figurePlusButtom1'>+</span><span class='figurePlusTop'>+</span>
           <img src='./asset/image/old_man.jpg.png' alt='An old man at rest'>
-          <span class='figurePlusRight'>+</span> 
+          <span class='figurePlusButtom'>+</span><span class='figurePlusTop2'>+</span>
         </figure>
 
         <div class='aboutMeContainer'>
@@ -130,12 +141,6 @@
     </section>
 
     <section class="experienceEl">
-      <!--       
-      <div class='space'> 
-
-        <p> </p>
-
-      </div> -->
 
       <div class='experienceDescriptionContainer'>
         <h3>
@@ -190,7 +195,7 @@
 
     </section>
 
-    <section class='featuredProject'>
+    <section class='featuredProject' id='challenge'>
       <div class='captionContainer'>
 
         <div class='featuredProjectHeadcaption'>
@@ -294,7 +299,7 @@
     </section>
 
 
-    <section class='contactContainer contactContainerMobile'>
+    <section class='contactContainer contactContainerMobile' id='myContact'>
       <div class='contactCaption contactHeadCaptionMobile'>
         <h2>CONTACT ME </h2>
 
@@ -346,14 +351,14 @@
                 
                     <li class='tweetLogoContainer mobileTweetLogoContainer'>
 
-                      <p class='twitter'>
+                      <p class='twitterSvgContainer'>
 
 
                         <svg viewBox="0 0 128 128">
                         <path d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z" fill="#000" style="stroke-width:.104373"></path>
                         </svg>
                               </p>
-                    <p>
+                    <p class="twitterLetter">
                       X
                     </p>
 
@@ -398,7 +403,7 @@
         </div>
     </section>
 
-  <footer>
+  </footer>
 
   </main>
 

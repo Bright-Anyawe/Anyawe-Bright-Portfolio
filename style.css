@@ -29,9 +29,66 @@ body {
         height: 100px;
     }
 
-    header #navList {
+    /* 
+    header #navList .secondSideBar {
         display: none;
+    
+    } */
+
+    header #navList li>a {
+        text-decoration: none;
+        color: rgb(240, 14, 14);
+        background-color: transparent;
+        padding: 0;
+
     }
+
+    #navList {
+        display: none;
+        border-radius: 7px;
+    }
+
+
+    #navList .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0px;
+        z-index: 999;
+        background-color: rgb(212, 212, 210);
+        box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 9px 0 0 9px;
+        transition: width 0.3s ease-in-out;
+        
+
+    }
+
+    /* 
+    .active_box {
+        opacity: 1;
+        left: 0px;
+        pointer-events: fill;
+    } */
+
+    /*  */
+    /* .sidebar li, .sidebar a {
+        width: 100%;
+
+    } */
+
+    .sidebar li {
+        border: none;
+        background-color: transparent;
+        border-radius: 9px;
+        color: white;
+        font-weight: 700;
+        width: 100%;
+
+    }
+
 
     header .mobileSvgMenuContainer {
         display: block;
@@ -390,43 +447,68 @@ body {
         font-family: arial;
     }
 
-    header #navList {
-        /* display: none; */
-    }
+
 
     body main {
         font-family: arial;
     }
 
-    /* #greetingContainer {
+    #navList .sidebar {
         display: flex;
-        justify-content: center;
-        align-items: center;
-    } */
-    /* 
-    .greetingTextContainer .hi {
-        position: relative;
-        right: 8rem;
-
-        margin: 27px 0 0 0;
     }
 
-    .greetingTextContainer .namedPerson {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 50px;
-        max-width: 200px;
-        text-align: center;
-        margin: 0;
+    nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+        background-color: white;
+        margin: 0 30px 0 0;
+        transition: top 0.3s;
+
     }
 
-    .greetingContainer .greetingTextContainer {
+    nav ul {
+        width: 100%;
+        list-style: none;
         display: flex;
-        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    nav li {
+        height: 50px;
+        font-weight: 700;
+    }
+
+    nav a {
+        height: 100%;
+        padding: 0 20px;
+        text-decoration: none;
+        display: flex;
         justify-content: center;
         align-items: center;
-    } */
+        color: black;
+    }
+
+    nav a:hover {
+        background-color: white;
+    }
+
+
+    #navList li>a {
+        text-decoration: none;
+        color: rgb(240, 14, 14);
+        background-color: transparent;
+
+    }
+
+    #navList li>a:hover {
+        background-color: rgb(188, 236, 15);
+    }
+
+
 
     .greetingTextContainer .briefIntro {
         display: flex;
@@ -686,11 +768,6 @@ body {
 
 
 header {
-    /* display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
-    margin: 10px 0 5rem 0; */
 
     display: flex;
     justify-content: space-between;
@@ -714,22 +791,56 @@ header {
     display: none;
 }
 
-#navList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    background-color: white;
+    margin: 0 30px 0 0;
+    transition: top 0.3s;
+
 }
 
-#navList button {
-    border: none;
-    padding: 10px;
-    background-color: var(--logo-color);
-    border-radius: 9px;
-    color: white;
+/* ul.sidebar {
+    display: block;
+
+} */
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+nav li {
+    height: 50px;
     font-weight: 700;
 }
 
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+#navList li>a {
+    text-decoration: none;
+    color: rgb(240, 14, 14);
+    background-color: transparent;
+
+}
+
+#navList li>a:hover {
+    background-color: rgb(188, 236, 15);
+}
 
 
 #greetingContainer {
@@ -785,12 +896,18 @@ header {
     color: white;
     font-weight: 600;
     border-radius: 5px;
+    max-height: 45px;
 }
 
 button.ResumeBtn {
     display: flex;
     align-items: center;
     background-color: black;
+}
+
+.ResumeBtn p a {
+    color: white;
+    text-decoration: none;
 }
 
 .ResumeBtn svg {
@@ -822,9 +939,32 @@ figure {
 
 }
 
-.figurePlusLeft, .figurePlusRight {
+.figurePlusButtom1 {
+    position: relative;
+    top: 9.8rem;
+    right: -14px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.figurePlusButtom {
     position: relative;
     top: 10rem;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.figurePlusTop {
+    position: relative;
+    top: -10rem;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.figurePlusTop2 {
+    position: relative;
+    top: -9.8rem;
+    right: 14px;
     font-weight: 900;
     font-size: 20px;
 }
@@ -1147,4 +1287,18 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.screenHandlerContainer {
+    gap: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitterLetter {
+
+    display: flex;
+    align-items: end;
 }
