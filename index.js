@@ -8,63 +8,43 @@ const menuSvg = document.querySelector(".menuSvgContainer");
 const body = document.querySelector("body");
 let prevScrollPos = window.scrollY;
 
-
 //Hide nav elemnt when user scroll down and and display it when scroll up
 window.onscroll = function () {
   let currentScrollPos = window.scrollY;
 
-    
-      if (prevScrollPos > currentScrollPos) {
-        document.querySelector("nav").style.top = "35px";
-      } else {
-        document.querySelector("nav").style.top = "-80px";
-        // document.querySelector(".sidebar").style.display = "flex";
-    }
-    prevScrollPos = currentScrollPos
+  if (prevScrollPos > currentScrollPos) {
+    document.querySelector("nav").style.top = "35px";
+  } else {
+    document.querySelector("nav").style.top = "-80px";
+    // document.querySelector(".sidebar").style.display = "flex";
+  }
+  prevScrollPos = currentScrollPos;
 };
 
 const toggleEl = document.querySelector("#toggleMenuIcon");
-const newSideBar = document.querySelector('#firstSideBarContainer');
-
+const newSideBar = document.querySelector("#firstSideBarContainer");
 
 function removeSideBar(e) {
-
-   if (e.target !== toggleEl && e.target !== newSideBar)  {
-    toggleEl.classList.remove('active');
-  newSideBar.classList.remove('active');
+  if (e.target !== toggleEl && e.target !== newSideBar) {
+    toggleEl.classList.remove("active");
+    newSideBar.classList.remove("active");
   }
 }
-document.addEventListener('touchstart', removeSideBar)
+document.addEventListener("touchstart", removeSideBar);
 document.addEventListener("click", removeSideBar);
 
-
 function toggleMenu() {
-  
-toggleEl.classList.toggle('active');
-newSideBar.classList.toggle('active');
-
+  toggleEl.classList.toggle("active");
+  newSideBar.classList.toggle("active");
 }
-toggleEl.addEventListener('click', toggleMenu)
+toggleEl.addEventListener("click", toggleMenu);
 
-// document.addEventListener("click", removeSideBar);
-//   document
-//     .querySelector("#sideBar1")
-//     .addEventListener("click", function (event) {
-//       event.stopPropagation();
-//     });
+const toggleTheme = document.querySelector("#toggleThemeModeContainer");
+const bodyEl = document.querySelector('body');
 
-
-// let menuOpen = false;
-// function showSideBar(event) {
-//   const navElId = document.querySelector('#navList')
-
-//   if (window.matchMedia("(max-width: 500px)").matches) {
-//     menuOpen = true;
-//     sideBar.style.width = "110px";
-//     sideBar.style.padding = '5px'
-//     console.log(navElId);
-//     navElId.style.display = "block";
-//   }
-//     navElId.style.display = "block";
-
-// }
+// Toggle page background color when a an element is active
+function togglePageBackground() {
+  toggleTheme.classList.toggle("active");
+  bodyEl.classList.toggle("active");
+};
+toggleTheme.addEventListener("click", togglePageBackground);

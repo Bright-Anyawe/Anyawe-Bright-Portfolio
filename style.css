@@ -6,12 +6,11 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-
 }
 
-body .active {
+body.active {
     background-color: black;
+    color: white;
 }
 
 :root {
@@ -808,6 +807,24 @@ body .active {
     }
 }
 
+div {
+    animation: CssscrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+@keyframes CssscrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
 
 header {
 
@@ -816,8 +833,22 @@ header {
     align-items: center;
     font-family: arial;
     margin: 20px;
-
+    animation-duration: 3s;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
 
 .portfolioLogo svg {
     width: 90px;
@@ -904,6 +935,8 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 
 
@@ -1410,21 +1443,96 @@ svg {
     align-items: end;
 }
 
+/* 
 #toggleThemeModeContainer {
     width: 90px;
     height: 30px;
     border-radius: 20px;
     border: none;
-    background-color: black;
-
+    background-color: #222;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0, 1),
+        inset 0 8px 8px rgba(0, 0, 0, 0, 1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0, 1)
 }
 
 .indicator {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: grey;
+    background-color: rgb(243, 228, 228);
     position: absolute;
     transform: translate(3px, 9%);
 
+}
+
+.indicator svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transform: translate(3px, 9%);
+
+}
+
+.indicator.active {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(240, 227, 115);
+    position: absolute;
+    transform: translate(3px, 9%);
+} */
+
+#toggleThemeModeContainer {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 160px;
+    background-color: #222;
+    transition: 0.5s;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+        inset 0 8px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggleThemeModeContainer.active {
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+        inset 0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+#toggleThemeModeContainer .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
+        inset 0 4px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+}
+
+.indicator svg {
+    transform: translate(3px, 9%);
+    fill: white;
+}
+
+#toggleThemeModeContainer.active .indicator svg {
+    fill: black;
+}
+
+
+#toggleThemeModeContainer.active .indicator {
+    left: 100px;
+    background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+    box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
+        inset 0 4px 4px rgba(255, 255, 255, 1),
+        inset 0 -4px 4px rgba(255, 255, 255, 1);
 }
