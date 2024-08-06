@@ -1,7 +1,7 @@
-body {
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border box;
+    box-sizing: border-box;
     /* font-family: 'arial' */
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -10,8 +10,12 @@ body {
 
 }
 
+body .active {
+    background-color: black;
+}
+
 :root {
-    --logo-color: rgb(76.470588%, 0%, 18.431373%);
+    --Dominant-color: rgb(76.470588%, 0%, 18.431373%);
 }
 
 @media(max-width: 500px) {
@@ -29,65 +33,102 @@ body {
         height: 100px;
     }
 
+    /* header #toggleMenuIcon {
+        display: block;
+    } */
 
-    header #navList li>a {
-        text-decoration: none;
-        color: rgb(240, 14, 14);
-        background-color: transparent;
-        padding: 0;
-        /* transition: all 1s ease-out; */
-        transition: display 3s easeInOutQuad 1s;
-        transition-behavior: allow-discrete;
+
+    #toggleMenuIcon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: red;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header #toggleMenuIcon::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+
+    header #toggleMenuIcon::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(5px);
+        transition: 0.2s;
+    }
+
+    #toggleMenuIcon.active::before {
+        transform: translateY(0px) rotate(45deg);
 
     }
 
-    #navList {
-        display: none;
-        border-radius: 7px;
-
+    #toggleMenuIcon.active::after {
+        transform: translateY(0px) rotate(-45deg);
 
     }
 
-
-    @starting-style {
-        .showing {
-            opacity: 0;
-        }
-    }
-
-    #navList .sidebar {
+    #firstSideBarContainer {
+        display: block;
         position: fixed;
         top: 0;
-        right: 0;
-        width: 0px;
-        z-index: 999;
-        background-color: rgb(212, 212, 210);
-        box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 9px 0 0 9px;
-
-
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: wheat;
+        transition: 0.5s;
     }
 
-    .sidebar li {
-        border: none;
-        background-color: transparent;
-        border-radius: 9px;
-        color: white;
-        font-weight: 700;
+    #firstSideBarContainer.active {
+        left: 0;
+    }
+
+    .firstSideBarContainer {
+        position: relative;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    #firstSideBarContainer li {
+        list-style: none;
+        display: inline-block;
         width: 100%;
+        padding: 10px 20px;
 
     }
 
-    .sidebar li:focus, .sidebar li:active {
-        background-color: #fff;
-        color: #333;
+    #firstSideBarContainer li:hover {
+        background-color: red;
+        color: black;
     }
 
-    header .mobileSvgMenuContainer {
-        display: block;
+    #firstSideBarContainer li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    header #navList {
+        display: none;
+    }
+
+    header .mobileScreenPortfolioLogo svg:hover, :focus {
+        fill: yellow;
+        background-color: white;
     }
 
     body main {
@@ -385,7 +426,7 @@ body {
 
     .mobileTextAreaInputEl {
         min-height: 80px;
-        min-width: 248px;
+        min-width: 229px;
         max-width: 300px;
         border-radius: 5px;
 
@@ -443,6 +484,9 @@ body {
         font-family: arial;
     }
 
+    .menuSvgContainer, #toggleMenuIcon, #firstSideBarContainer {
+        display: none;
+    }
 
 
     body main {
@@ -534,6 +578,7 @@ body {
 
     .aboutMeContainer .introHeaderText {
         margin: 1rem 0 10px 0;
+        font-weight: 800;
     }
 
     .aboutMeContainer .aboutMeEl {
@@ -547,6 +592,7 @@ body {
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
         max-width: 300px;
+        font-weight: 800;
     }
 
     .langTechToolContainer {
@@ -781,22 +827,32 @@ header {
 
 .comma {
     font-weight: 700;
-    color: var(--logo-color);
+    color: var(--Dominant-color);
 }
 
-.menuSvgContainer {
+.toggleMenuOnDesktop, .firstSideBarContainerOnDesktop {
     display: none;
 }
+
+
+
+#navList {
+    display: block;
+}
+
+
 
 nav {
     position: fixed;
     right: 0;
-    top: 0;
+    top: 35px;
     background-color: transparent;
     background-color: white;
     margin: 0 30px 0 0;
     transition: top 0.3s;
-
+    display: none;
+    border-radius: 8px;
+    border: 1px solid rgb(216, 214, 214);
 }
 
 /* ul.sidebar {
@@ -832,8 +888,10 @@ nav a {
 
 #navList li>a {
     text-decoration: none;
-    color: rgb(240, 14, 14);
+    color: var(--Dominant-color);
     background-color: transparent;
+    font-weight: 700;
+    transition: 0.3s;
 
 }
 
@@ -876,26 +934,26 @@ nav a {
 .greetingTextContainer p {
     font-size: 17px;
     max-width: 700px;
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; */
 }
 
 .btnContainer {
     display: flex;
     gap: 10px;
+    margin: 25px 0 60px;
 }
 
 .btnContainer button {
     border: none;
     /* border: 1px solid var(--logo-color); */
-    background-color: var(--logo-color);
+    background-color: var(--Dominant-color);
     color: white;
     font-weight: 600;
     border-radius: 5px;
-    max-height: 45px;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 button.ResumeBtn {
@@ -924,18 +982,32 @@ button.ResumeBtn {
     align-items: center;
 }
 
+.subTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    padding: 40px 0;
+}
+
+
 .introduction {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.introHeaderText {
+    font-weight: 700;
+    font-weight: 500;
+    text-align: center;
+}
+
 figure {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .figurePlusButtom1 {
@@ -975,19 +1047,13 @@ figure {
     object-fit: cover;
 }
 
-.subTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 .aboutMeContainer {
     margin: 0 20px;
 }
 
 span {
-    color: var(--logo-color);
+    color: var(--Dominant-color);
     /* background-color: brown; */
     border-radius: 10px;
     transform: rotate(180deg);
@@ -1002,6 +1068,11 @@ span {
 .identity {
     color: black;
     font-weight: 700;
+}
+
+.langTechToolContainer h3 {
+    font-weight: 700;
+    margin: 25px 0 10px;
 }
 
 .experienceEl {
@@ -1027,6 +1098,12 @@ ul {
     align-items: center;
 }
 
+.experienceDescriptionContainer h3 {
+    margin: 60px 0 10px;
+    font-weight: 600;
+}
+
+
 .experienceDescription {
 
     display: flex;
@@ -1042,6 +1119,12 @@ ul {
     align-items: center;
     margin: 60px;
 }
+
+.courseSubTitle h3 {
+    font-weight: 700;
+    text-align: center;
+}
+
 
 .studiesRange {
     border: 1px solid black;
@@ -1061,6 +1144,12 @@ ul {
 
 .courseInfoContainer h4, .subject {
     margin: 0;
+    text-align: center;
+    margin: 6px 0 10px;
+}
+
+.skill {
+    text-align: center;
 }
 
 .featuredProject {
@@ -1070,19 +1159,38 @@ ul {
     align-items: center;
 }
 
+.featuredProjectHeadcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.featuredProjectHeadcaption h3 {
+    font-weight: 700;
+}
+
 .logo, .mobileResponsive, .showMobile {
     display: none;
 }
 
-
+.deviceLayoutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .deviceLayout {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    min-width: 400px;
+    min-width: 700px;
+    max-width: 900px;
     min-height: 300px;
+    gap: 30px;
 }
 
 .desktopImageContainer {
@@ -1111,12 +1219,7 @@ ul {
 
 }
 
-.featuredProjectHeadcaption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .buttons {
     display: flex;
@@ -1198,7 +1301,7 @@ form input {
 
 textarea {
     min-height: 80px;
-    min-width: 380px;
+    min-width: 360px;
 }
 
 .sendBtnContainer {
@@ -1256,6 +1359,8 @@ svg {
     width: 80px;
     height: 80px;
     transform: rotate(180deg);
+    position: relative;
+    right: 10px;
 
 }
 
@@ -1281,6 +1386,7 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 45px;
 }
 
 .socialMediaEl {
@@ -1302,4 +1408,23 @@ svg {
 
     display: flex;
     align-items: end;
+}
+
+#toggleThemeModeContainer {
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+
+}
+
+.indicator {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    transform: translate(3px, 9%);
+
 }

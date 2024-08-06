@@ -15,7 +15,7 @@ window.onscroll = function () {
 
     
       if (prevScrollPos > currentScrollPos) {
-        document.querySelector("nav").style.top = "0";
+        document.querySelector("nav").style.top = "35px";
       } else {
         document.querySelector("nav").style.top = "-80px";
         // document.querySelector(".sidebar").style.display = "flex";
@@ -23,77 +23,48 @@ window.onscroll = function () {
     prevScrollPos = currentScrollPos
 };
 
+const toggleEl = document.querySelector("#toggleMenuIcon");
+const newSideBar = document.querySelector('#firstSideBarContainer');
 
 
-let menuOpen = false;
-function showSideBar(event) {
-  const navElId = document.querySelector('#navList')
+function removeSideBar(e) {
 
-  if (window.matchMedia("(max-width: 500px)").matches) {
-    menuOpen = true;
-    sideBar.style.width = "110px";
-    sideBar.style.padding = '5px'
-    console.log(navElId);
-    navElId.style.display = "block";
-  }
-    navElId.style.display = "block";
-
-}
-menuSvg.addEventListener("touchstart", function () {
-  if (!menuOpen) {
-    showSideBar();
-  }
-});
-
-function removeSideBar(event) {
-  const navElId = document.querySelector("#navList");
-  const sideBarElement = document.querySelector(".sidebar");
-
-  if (!sideBarElement.contains(event.target)) {
-    menuOpen = false;
-    sideBar.style.width = "0";
-    navElId.style.display = "none";
+   if (e.target !== toggleEl && e.target !== newSideBar)  {
+    toggleEl.classList.remove('active');
+  newSideBar.classList.remove('active');
   }
 }
-
+document.addEventListener('touchstart', removeSideBar)
 document.addEventListener("click", removeSideBar);
+
+
+function toggleMenu() {
+  
+toggleEl.classList.toggle('active');
+newSideBar.classList.toggle('active');
+
+}
+toggleEl.addEventListener('click', toggleMenu)
+
+// document.addEventListener("click", removeSideBar);
 //   document
-//     .querySelector(".sidebar")
-//     .addEventListener("touchstart", function (event) {
+//     .querySelector("#sideBar1")
+//     .addEventListener("click", function (event) {
 //       event.stopPropagation();
 //     });
 
-//   const sidebarItems = document.querySelectorAll(".sidebar li a");
-//   sidebarItems.forEach((item) => {
-//     item.addEventListener("click", removeSideBar);
-//   });
 
-// function removeSideBar(event) {
-
-//   const navElId = document.querySelector("#navList");
-
-//    menuOpen = false;
-//   sideBar.style.width = "0px";
+// let menuOpen = false;
+// function showSideBar(event) {
+//   const navElId = document.querySelector('#navList')
 
 //   if (window.matchMedia("(max-width: 500px)").matches) {
 //     menuOpen = true;
-//     sideBar.style.width = "0";
-
-//     if (event.target.class === '.sidebar') {
-//       console.log(event.target)
-//     navElId.style.display = "none";
-      
-//     }
+//     sideBar.style.width = "110px";
+//     sideBar.style.padding = '5px'
+//     console.log(navElId);
+//     navElId.style.display = "block";
 //   }
-//   navElId.style.display = "none";
+//     navElId.style.display = "block";
 
 // }
-// document.addEventListener('touchstart', removeSideBar);
-
-// body.addEventListener("touchstart", function () {
-//   if (menuOpen) {
-//     removeSideBar();
-//   }
-// });
-
-

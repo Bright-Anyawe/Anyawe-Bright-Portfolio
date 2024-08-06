@@ -17,24 +17,44 @@
 <body>
 
   <header>
-    <div class="portfolioLogo mobileScreenPortfolioLogo">
+      <div class="portfolioLogo mobileScreenPortfolioLogo">
 
-      
-            <svg viewBox="0 0 128 128">
+        
+              <svg viewBox="0 0 128 128">
+              
+    <g id="surface1">
+      <path style=" stroke:none;fill-rule:nonzero;fill:rgb(86.666667%,0%,19.215686%);fill-opacity:1;" d="M 64 15.359375 L 16.332031 32.359375 L 23.601562 95.386719 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "></path>
+      <path style=" stroke:none;fill-rule:nonzero;fill:rgb(76.470588%,0%,18.431373%);fill-opacity:1;" d="M 64 15.359375 L 64 26.726562 L 64 26.675781 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "></path>
+      <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 64 26.675781 L 34.203125 93.492188 L 45.3125 93.492188 L 51.300781 78.539062 L 76.59375 78.539062 L 82.585938 93.492188 L 93.695312 93.492188 Z M 72.703125 69.324219 L 55.296875 69.324219 L 64 48.382812 Z M 72.703125 69.324219 "></path>
+    </g>
+
+              </svg>
             
-  <g id="surface1">
-    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(86.666667%,0%,19.215686%);fill-opacity:1;" d="M 64 15.359375 L 16.332031 32.359375 L 23.601562 95.386719 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "></path>
-    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(76.470588%,0%,18.431373%);fill-opacity:1;" d="M 64 15.359375 L 64 26.726562 L 64 26.675781 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "></path>
-    <path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 64 26.675781 L 34.203125 93.492188 L 45.3125 93.492188 L 51.300781 78.539062 L 76.59375 78.539062 L 82.585938 93.492188 L 93.695312 93.492188 Z M 72.703125 69.324219 L 55.296875 69.324219 L 64 48.382812 Z M 72.703125 69.324219 "></path>
-  </g>
-
-            </svg>
-          
-    </div>
+      </div>
 
 
-    <div class="menuSvgContainer mobileSvgMenuContainer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>    </div>
+    <!-- <div class="menuSvgContainer mobileSvgMenuContainer"> -->
+     
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>    </div> -->
+     
+      <div id='toggleMenuIcon' class="toggleMenuOnDesktop"> 
+ 
+      </div>
+
+      <div id='firstSideBarContainer' class="firstSideBarContainerOnDesktop"> 
+
+        <ul class='sideBar'>
+        
+        <li class="navlinks"> <a href="#">HOME</a>  </li>
+        <li class="navlinks"> <a href="#personalInfo">ABOUT</a> </li>
+        <li class="navlinks"> <a href="#challenge">PROJECT</a> </li>
+        <li class="navlinks"> <a href="#myContact">CONTACT ME</a> </li>
+
+      </ul>
+
+      </div>
+
+
       <nav id="navList">
       <ul class='sidebar'>
         
@@ -45,14 +65,7 @@
 
       </ul>
 
-      <!-- <ul class='secondSideBar'>
-        
-      <li> <a href="#">HOME</a>  </li>
-      <li> <a href="#personalInfo">ABOUT</a> </li>
-      <li> <a href="#challenge">PROJECT</a> </li>
-      <li> <a href="#myContact">CONTACT ME</a> </li>
-
-      </ul> -->
+  
       </nav>
   </header>
 
@@ -101,7 +114,7 @@
 
 
           <h2 class='introHeaderText'> Introduction</h2>
-          <p class='aboutMeEl'> My name is <span class="identity">Adonu Bright Anyawe</span>, I'm a front-end developer in Ghana.
+          <p class='aboutMeEl'> My name is <span class="identity"> Anyawe Bright </span>, I'm a front-end developer in Ghana.
             I spend most of my time studying in other to improve upon my skills, using codes to solve real world problem
             which is one of things I love to do
           </p>
@@ -159,20 +172,20 @@
     </section>
 
     <section class='courseContainer'>
-      <div>
+      <!-- <div>
 
         <p class='studiesRange'>
 
         </p>
 
-      </div>
+      </div> -->
 
       <img class='logo'>
 
       </img>
 
       <div class='courseInfo'>
-        <div class='subHeader'>
+        <div class='courseSubTitle'>
           <h3> The <span>Odin</span> Project </h3>
           <p class='subject'> Remote front-end developer course</p>
         </div>
@@ -216,9 +229,10 @@
 
         <img class='showMobile' src='asset/image/To-do project-mobile.png' alt='Image for mobile layout'>
 
-        <div class='deviceLayout'>
+        <div class='deviceLayoutContainer'>
 
-          <figure class='desktopImageContainer'>
+          <div class='deviceLayout'>
+            <figure class='desktopImageContainer'>
             <!-- <img class='showDesktop' src='' alt='Image for desktop layout'>  -->
 
           </figure>
@@ -226,6 +240,7 @@
           <figure class='mobileImageContainer'>
 
           </figure>
+          </div>
         </div>
 
         <div class='buttons'>
@@ -391,8 +406,8 @@
           </div>
 
         <div class="screenHandlerContainer">
-          <div>
-              <p>control for night will here!</p>
+          <div id='toggleThemeModeContainer'>
+              <p class="indicator"></p>
           </div>
 
           <div class="creatorContainer">
