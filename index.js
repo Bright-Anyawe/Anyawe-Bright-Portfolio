@@ -6,6 +6,7 @@ let navLinks = document.querySelector(".sidebar li");
 console.log(navLinks);
 const menuSvg = document.querySelector(".menuSvgContainer");
 const body = document.querySelector("body");
+const workBtnEl = document.querySelector(".viewWorkBtn"); 
 let prevScrollPos = window.scrollY;
 
 //Hide nav elemnt when user scroll down and and display it when scroll up
@@ -14,8 +15,12 @@ window.onscroll = function () {
 
   if (prevScrollPos > currentScrollPos) {
     document.querySelector("nav").style.top = "35px";
+    document.querySelector("#toggleMenuIcon").style.top = "30px";
+
   } else {
     document.querySelector("nav").style.top = "-80px";
+    document.querySelector("#toggleMenuIcon").style.top = "-80px";
+
     // document.querySelector(".sidebar").style.display = "flex";
   }
   prevScrollPos = currentScrollPos;
@@ -38,6 +43,10 @@ function toggleMenu() {
   newSideBar.classList.toggle("active");
 }
 toggleEl.addEventListener("click", toggleMenu);
+
+// workBtnEl.addEventListener('click', () => {
+//   workBtnEl.classList.toggle('active');
+// })
 
 const toggleTheme = document.querySelector("#toggleThemeModeContainer");
 const bodyEl = document.querySelector('body');

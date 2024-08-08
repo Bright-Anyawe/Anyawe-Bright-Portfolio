@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="index.js" defer> </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="icon"  href="asset/image/Anyawe.logo.original.svg">           
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon"  href="asset/image/Anyawe.logo.original.svg">           
           
 <title>Anyawe Bright</title>
 </head>
@@ -32,11 +32,6 @@
             
       </div>
 
-
-    <!-- <div class="menuSvgContainer mobileSvgMenuContainer"> -->
-     
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>view-dashboard</title><path d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>    </div> -->
-     
       <div id='toggleMenuIcon' class="toggleMenuOnDesktop"> 
  
       </div>
@@ -85,7 +80,7 @@
         </p>
 
         <div class='btnContainer'>
-          <button> Check out my work</button>
+          <button class="viewWorkBtn"> Check out my work</button>
 
           <button class="ResumeBtn"> 
              <p><a href="asset/Files/Resume.docx">Resume</a></p> 
@@ -105,8 +100,8 @@
 
       <div class='introduction mobileScreenIntroEl'>
 
-        <figure class='developerImage'>  <span class='figurePlusButtom1'>+</span><span class='figurePlusTop'>+</span>
-          <img src='./asset/image/old_man.jpg.png' alt='An old man at rest'>
+        <figure class='developerImage '>  <span class='figurePlusButtom1'>+</span><span class='figurePlusTop'>+</span>
+          <img id='developerImageOnMobile' src='./asset/image/old_man.jpg.png' alt='An old man at rest'>
           <span class='figurePlusButtom'>+</span><span class='figurePlusTop2'>+</span>
         </figure>
 
@@ -172,13 +167,6 @@
     </section>
 
     <section class='courseContainer'>
-      <!-- <div>
-
-        <p class='studiesRange'>
-
-        </p>
-
-      </div> -->
 
       <img class='logo'>
 
@@ -192,7 +180,8 @@
         <img class='logo mobileScreenLogo' src='asset/image/Odin-logo.jpg' alt='Odin project logo'>
 
         </img>
-        <p class='skill'>Skill developed from the odin project is based on javascript, css and html with framework like
+        <p class='skill'>Skill developed from the odin project is based 
+          on vanilla javascript, vanilla css and html with framework like
           github,
           I have acquired knowlegde in data structures and algorithms </p>
 

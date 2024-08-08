@@ -11,6 +11,7 @@
 body.active {
     background-color: black;
     color: white;
+    fill: var(--Dominant-color)
 }
 
 :root {
@@ -39,15 +40,19 @@ body.active {
 
     #toggleMenuIcon {
         position: fixed;
-        top: 20px;
+        top: 30px;
         right: 20px;
-        width: 60px;
-        height: 60px;
-        background-color: red;
+        width: 50px;
+        height: 50px;
+        background-color: var(--Dominant-color);
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 8px;
+        transition: top 0.3s;
+
+        z-index: 1000;
     }
 
     header #toggleMenuIcon::before {
@@ -89,6 +94,7 @@ body.active {
         height: 100vh;
         background-color: wheat;
         transition: 0.5s;
+        z-index: 1000;
     }
 
     #firstSideBarContainer.active {
@@ -132,13 +138,6 @@ body.active {
 
     body main {
         font-family: arial;
-    }
-
-
-    main .greetingContainer {
-        /* display: flex;
-            justify-content: center;
-             align-items: center; */
     }
 
     .greetingTextContainer .hi {
@@ -208,14 +207,12 @@ body.active {
         margin: 0;
     }
 
-    .introductionContainer .developerImage img {
-        max-width: 300px;
+    #developerImageOnMobile {
+        min-width: 230px;
+        max-width: 250px;
         margin: 0;
     }
 
-    /* .subTitleContainer .subTitle {
-
-            } */
 
     .aboutMeContainer {
         margin: 0 0 0 50px;
@@ -351,7 +348,6 @@ body.active {
         display: none;
     }
 
-
     .subFeaturedProjectContainer .buttons {
         display: flex;
         gap: 1rem;
@@ -377,19 +373,28 @@ body.active {
         gap: 2rem;
         border: 1px solid black;
         min-width: 250px;
-        min-height: 200px;
+        max-width: 250px;
+        min-height: 170px;
         border-radius: 9px;
         padding: 10px;
         background-image: url('asset/image/Dashboard.jpg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+        /* margin: 10px; */
     }
 
     .projectContainer {
         display: flex;
         flex-direction: column;
         gap: 5rem
+    }
+
+    .firstProjectContainer, .secondProjectContainer, .thirdProjectContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .firstProjectContainer p, .secondProjectContainer p,
@@ -435,14 +440,14 @@ body.active {
         margin: 16px 0 0 0;
     }
 
-    .mobileSendBtnContainer>button .mobileSubmitInputEl {
+    .submit.mobileSubmitInputEl {
         display: flex;
         align-items: center;
         margin: 16px 0 0 0;
         height: 50px;
         padding: 10px;
         font-size: 19px;
-        background-color: green;
+        background-color: var(--Dominant-color);
         color: white;
         border: none;
         border-radius: 9px;
@@ -471,9 +476,409 @@ body.active {
         width: 40px;
         height: 40px;
     }
+
+
+
 }
 
-@media(min-width: 501px) and (max-width: 768px) {
+
+@media(min-width: 501px) and (max-width: 659px) {
+    body header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* font-size: 40px;
+                margin: 10px 0 5rem 0; */
+        font-family: arial;
+    }
+
+    .menuSvgContainer, #toggleMenuIcon, #firstSideBarContainer {
+        display: none;
+    }
+
+
+    body main {
+        font-family: arial;
+    }
+
+    header#navList, .sidebar {
+        display: none
+    }
+
+    #toggleMenuIcon {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--Dominant-color);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        transition: top 0.3s;
+
+        z-index: 1000;
+    }
+
+
+    header #toggleMenuIcon::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+
+    header #toggleMenuIcon::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transform: translateY(5px);
+        transition: 0.2s;
+    }
+
+    #toggleMenuIcon.active::before {
+        transform: translateY(0px) rotate(45deg);
+
+    }
+
+    #toggleMenuIcon.active::after {
+        transform: translateY(0px) rotate(-45deg);
+
+    }
+
+    #firstSideBarContainer {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: wheat;
+        transition: 0.5s;
+        z-index: 1000;
+    }
+
+    #firstSideBarContainer.active {
+        left: 0;
+    }
+
+    .firstSideBarContainer {
+        position: relative;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    #firstSideBarContainer li {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+
+    }
+
+    #firstSideBarContainer li:hover {
+        background-color: red;
+        color: black;
+    }
+
+    #firstSideBarContainer li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .greetingTextContainer .hi {
+        position: relative;
+        right: 9rem;
+
+        margin: 27px 0 0 0;
+    }
+
+    .greetingTextContainer .namedPerson {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        max-width: 400px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .greetingTextContainer .briefIntro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    .greetingContainer .btnContainer {
+        margin: 2rem 0 3rem 0;
+    }
+
+    .greetingContainer .btnContainer button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+    section.introductionContainer {
+        margin: 0 20px;
+    }
+
+
+    .aboutMeContainer {
+        margin: 0 0 0 50px;
+    }
+
+    .aboutMeContainer .introHeaderText {
+        margin: 1rem 0 10px 0;
+        font-weight: 800;
+    }
+
+    .aboutMeContainer .aboutMeEl {
+        margin: 12px 0 1rem 0;
+    }
+
+    .aboutMeContainer .aboutGoals {
+        font: 18px 'Arial';
+    }
+
+    .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
+    .briefNote, .aboutFeaturedWork, .contactPEl {
+        max-width: 300px;
+    }
+
+    .langTechToolContainer {
+        margin: 0 0 0 50px;
+
+    }
+
+    .experienceEl .experienceDescriptionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experienceDescriptionContainer .experienceDescription {
+        text-align: center;
+    }
+
+    main .courseContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .courseInfo .subHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .courseInfo .subHeader>h3, .featuredProjectHeadcaption>h3,
+    .projectHeader h2, .contactHeadCaptionMobile>h2, .mobileFormContainer {
+        margin: 50px 0 10px 0;
+    }
+
+    .subject, .contactHeadCaptionMobile .contactPEl {
+        text-align: center;
+        margin: 0;
+    }
+
+    .skill {
+        text-align: center;
+        min-width: 500px;
+        font: 16px 'Arial'
+    }
+
+    .courseInfo .logo {
+        min-width: 250px;
+        min-height: 200px;
+    }
+
+    .courseContainer .courseInfo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .courseContainer .courseImgContainer {
+        display: block;
+    }
+
+    main .featuredProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .captionContainer, .subFeaturedProjectContainer .aboutFeaturedWork,
+    .otherProjectsContainer .projectHeaderContainer {
+        text-align: center;
+    }
+
+    .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
+        margin: 0 0 10px 0;
+    }
+
+    .featuredProject .subFeaturedProjectContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font: 16px 'Arial'
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showDesktop {
+        border: 1px solid black;
+        min-width: 250px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+    .featuredProject .subFeaturedProjectContainer .showMobile {
+        border: 1px solid black;
+        max-width: 100px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+
+    .subFeaturedProjectContainer .buttons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .subFeaturedProjectContainer .buttons>button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+    main .otherProjectsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projectContainer .mobileScreen {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        border: 1px solid black;
+        min-width: 250px;
+        min-height: 200px;
+        border-radius: 9px;
+        padding: 10px;
+    }
+
+    div.deviceLayout {
+        max-width: 560px;
+        min-width: 550px;
+    }
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem
+    }
+
+    .firstProject.container p, .secondProject.container p,
+    .thirdProject.container p {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .contactContainerMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactHeadCaptionMobile, .mobileSendBtnContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileFormContainer input {
+        min-width: 230px;
+        min-height: 25px;
+        max-width: 250px;
+        max-height: 30px;
+        border-radius: 5px;
+    }
+
+    .mobileTextAreaInputEl {
+        min-height: 80px;
+        min-width: 250px;
+        max-width: 300px;
+        border-radius: 5px;
+
+    }
+
+    .mobileFormContainer>p {
+        margin: 16px 0 0 0;
+    }
+
+    .mobileSubmitInputEl {
+        margin: 16px 0 0 0;
+        width: 100px;
+        max-width: 120px;
+        height: 35px;
+        font-size: 19px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 9px;
+    }
+
+    .mobileLogoContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .mobileGithublogoContainer, .mobileGmailLogoContainer, .mobileTweetLogoContainer {
+        display: flex;
+        /* flex-direction: column; */
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(min-width: 660px) and (max-width: 768px) {
     body header {
         display: flex;
         justify-content: space-between;
@@ -504,6 +909,7 @@ body.active {
         background-color: white;
         margin: 0 30px 0 0;
         transition: top 0.3s;
+        z-index: 1000;
 
     }
 
@@ -560,7 +966,7 @@ body.active {
     }
 
     .greetingContainer .btnContainer {
-        margin: 0 0 3rem 0;
+        margin: 2rem 0 3rem 0;
     }
 
     .greetingContainer .btnContainer button {
@@ -591,7 +997,6 @@ body.active {
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
         max-width: 300px;
-        font-weight: 800;
     }
 
     .langTechToolContainer {
@@ -810,7 +1215,7 @@ body.active {
 div {
     animation: CssscrollReveal ease-in-out both;
     animation-timeline: view();
-    animation-range: entry 50% cover 50%;
+    animation-range: entry 20% cover 50%;
 }
 
 @keyframes CssscrollReveal {
@@ -837,24 +1242,25 @@ header {
     animation-name: slidein;
 }
 
-@keyframes slidein {
-    from {
-        translate: 150vw 0;
-        scale: 200% 1;
-    }
-
-    to {
-        translate: 0 0;
-        scale: 100% 1;
-    }
-}
-
 
 .portfolioLogo svg {
     width: 90px;
     height: 100px;
+    animation: rotate 0.7s ease-in-out both;
 
 }
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 .comma {
     font-weight: 700;
@@ -967,12 +1373,69 @@ nav a {
 .greetingTextContainer p {
     font-size: 17px;
     max-width: 700px;
+
+}
+
+.namedPerson:hover {
+    -webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-8-8 11:50:19
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation focus-in-contract
+ * ----------------------------------------
+ */
+@-webkit-keyframes focus-in-contract {
+    0% {
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-contract {
+    0% {
+        letter-spacing: 1em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 
 .btnContainer {
     display: flex;
     gap: 10px;
     margin: 25px 0 60px;
+}
+
+.btnContainer :first-child {
+    transition: 0.3s ease-in-out;
+}
+
+.viewWorkBtn:active, .ResumeBtn:active {
+    transform: scaleY(1.1) rotateY(45deg);
 }
 
 .btnContainer button {
@@ -993,6 +1456,8 @@ button.ResumeBtn {
     display: flex;
     align-items: center;
     background-color: black;
+    transition: 0.3s ease-in-out;
+
 }
 
 .ResumeBtn p a {
@@ -1075,7 +1540,7 @@ figure {
 
 .developerImage img {
     max-width: 300px;
-    min-width: 290px;
+    min-width: 250px;
     min-height: 300px;
     object-fit: cover;
 }
@@ -1173,7 +1638,53 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
 }
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-8-7 7:30:24
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation kenburns-bottom
+ * ----------------------------------------
+ */
+/* @-webkit-keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}
+
+@keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+} */
+
 
 .courseInfoContainer h4, .subject {
     margin: 0;
@@ -1237,6 +1748,56 @@ ul {
     min-width: 350px;
     min-height: 200px;
 }
+
+.desktopImageContainer:hover, .mobileImageContainer:hover {
+    /* animation: shack 2s ease 2 alternate; */
+    -webkit-animation: kenburns-bottom 5s ease-out both;
+    animation: kenburns-bottom 5s ease-out both;
+
+}
+
+@-webkit-keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}
+
+@keyframes kenburns-bottom {
+    0% {
+        -webkit-transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
+        -webkit-transform-origin: 50% 84%;
+        transform-origin: 50% 84%;
+    }
+
+    100% {
+        -webkit-transform: scale(1.25) translateY(15px);
+        transform: scale(1.25) translateY(15px);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom;
+    }
+}
+
+
+/* @keyframes shack {
+    from {
+        transform: scale(1.4);
+    }
+
+    to {
+        transform: scale(1);
+    }
+} */
 
 .mobileImageContainer {
     background-image: url('asset/image/To-do project-mobile.png');
@@ -1351,8 +1912,7 @@ textarea {
     max-width: 100px;
     min-width: 80px;
     height: 40px;
-    background-color: var(--logo-color);
-    ;
+    background-color: var(--Dominant-color);
     border: none;
     border-radius: 9px;
     color: white;
@@ -1443,45 +2003,6 @@ svg {
     align-items: end;
 }
 
-/* 
-#toggleThemeModeContainer {
-    width: 90px;
-    height: 30px;
-    border-radius: 20px;
-    border: none;
-    background-color: #222;
-    transition: 0.5s;
-    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0, 1),
-        inset 0 8px 8px rgba(0, 0, 0, 0, 1),
-        inset 0 -4px 4px rgba(0, 0, 0, 0, 1)
-}
-
-.indicator {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: rgb(243, 228, 228);
-    position: absolute;
-    transform: translate(3px, 9%);
-
-}
-
-.indicator svg {
-    width: 20px;
-    height: 20px;
-    fill: white;
-    transform: translate(3px, 9%);
-
-}
-
-.indicator.active {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: rgb(240, 227, 115);
-    position: absolute;
-    transform: translate(3px, 9%);
-} */
 
 #toggleThemeModeContainer {
     position: relative;
