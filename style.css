@@ -170,19 +170,26 @@ body.active {
         align-items: center;
         text-align: center;
 
-        max-width: 300px;
-        font-size: 12px;
+        /* max-width: 300px; */
+        padding: 15px;
+        font-size: 17px;
     }
 
     .greetingContainer .btnContainer {
         margin: 0 0 3rem 0;
+        padding: 15px;
     }
 
     .greetingContainer .btnContainer button {
         padding: 10px;
-        border: none;
         border-radius: 6px;
-        font-size: 17px;
+        font-size: 15px;
+
+    }
+
+    button.viewWorkBtn a, .btnContainer button a {
+        font-size: 13px;
+
     }
 
 
@@ -618,19 +625,24 @@ body.active {
         align-items: center;
         text-align: center;
 
-        max-width: 300px;
-        font-size: 12px;
+        /* max-width: 300px; */
+        padding: 15px;
+        font-size: 19px;
     }
 
     .greetingContainer .btnContainer {
-        margin: 2rem 0 3rem 0;
+        margin: 0rem 0 3rem 0;
     }
 
     .greetingContainer .btnContainer button {
         padding: 10px;
-        border: none;
         border-radius: 6px;
         font-size: 17px;
+    }
+
+    button.viewWorkBtn a, .btnContainer button a {
+        font-size: 15px;
+
     }
 
     section.introductionContainer {
@@ -975,9 +987,13 @@ body.active {
 
     .greetingContainer .btnContainer button {
         padding: 10px;
-        border: none;
         border-radius: 6px;
         font-size: 17px;
+    }
+
+    button.viewWorkBtn a, .btnContainer button a {
+        font-size: 16px;
+
     }
 
     button.ResumeBtn {
