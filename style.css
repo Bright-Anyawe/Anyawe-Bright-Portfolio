@@ -637,6 +637,10 @@ body.active {
         margin: 0 20px;
     }
 
+    .mobileScreenIntroEl {
+        margin: 0 15px;
+    }
+
 
     .aboutMeContainer {
         margin: 0 0 0 50px;
@@ -1274,6 +1278,7 @@ header {
 
 
 #navList {
+    z-index: 1000;
     display: block;
 }
 
@@ -1642,7 +1647,7 @@ ul {
     transform: rotate(-0.7deg);
     transform: skewX(-8deg);
     transform: skew(12deg, -2deg);
-    background-image: url('asset/image/portfolio tablet.png');
+    background-image: url('asset/image/Odin-logo.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1744,7 +1749,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     min-width: 700px;
     max-width: 900px;
     min-height: 300px;
@@ -2009,11 +2014,15 @@ svg {
 }
 
 .screenHandlerContainer {
-    gap: 8rem;
+gap: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.creatorContainer p {
+        margin: 1px 0 100px
 }
 
 .twitterLetter {
