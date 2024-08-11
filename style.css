@@ -964,9 +964,9 @@ body.active {
         justify-content: center;
         align-items: center;
         text-align: center;
-
-        max-width: 300px;
-        font-size: 12px;
+        /* max-width: 300px; */
+        font-size: 19px;
+        padding: 0 15px;
     }
 
     .greetingContainer .btnContainer {
@@ -978,6 +978,10 @@ body.active {
         border: none;
         border-radius: 6px;
         font-size: 17px;
+    }
+
+    button.ResumeBtn {
+        border: 1px solid white;
     }
 
 
@@ -1376,12 +1380,16 @@ nav a {
 }
 
 .greetingTextContainer p {
-    font-size: 17px;
+    font-size: 20px;
     max-width: 700px;
 
 }
 
-.namedPerson:hover {
+.greetingTextContainer h2 {
+    margin: 0 0 20px;
+}
+
+/* .namedPerson:hover {
     -webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
@@ -1399,7 +1407,7 @@ nav a {
  * animation focus-in-contract
  * ----------------------------------------
  */
-@-webkit-keyframes focus-in-contract {
+/* @-webkit-keyframes focus-in-contract {
     0% {
         letter-spacing: 1em;
         -webkit-filter: blur(12px);
@@ -1427,12 +1435,12 @@ nav a {
         filter: blur(0px);
         opacity: 1;
     }
-}
+} */
 
 .btnContainer {
     display: flex;
     gap: 10px;
-    margin: 25px 0 60px;
+    margin: 0 0 60px;
 }
 
 .btnContainer :first-child {
@@ -1457,20 +1465,21 @@ nav a {
 
 }
 
-.viewWorkBtn  a { 
-color: white;
-text-decoration: none;
+.viewWorkBtn a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
 
 }
-    
-    
-    
-    button.ResumeBtn {
+
+
+
+button.ResumeBtn {
     display: flex;
     align-items: center;
     background-color: black;
     transition: 0.3s ease-in-out;
-
+    border: 1px solid white
 }
 
 .ResumeBtn p a {
@@ -1732,7 +1741,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-        /* background-image: url('asset/image/mesh-pf-bg.jpeg');
+    /* background-image: url('asset/image/mesh-pf-bg.jpeg');
      background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
@@ -1906,25 +1915,26 @@ ul {
     align-items: center;
     gap: 4rem;
     position: relative;
-      overflow: hidden;   
+    overflow: hidden;
 
-       
+
 
 }
 
 .contactContainer::before {
-      content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-   background-image: url('asset/image/istock-portfolio-bg2.jpeg');
-     background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('asset/image/istock-portfolio-bg2.jpeg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  transform: rotate(180deg) scale(2);
-  z-index: -1; /* Places the pseudo-element behind the content */
+    transform: rotate(180deg) scale(2);
+    z-index: -1;
+    /* Places the pseudo-element behind the content */
 
     /* transform: rotate(270deg) */
 }
@@ -1999,23 +2009,24 @@ textarea {
 footer {
     margin: 6rem 0 0 0;
     border-top: 1px solid black;
-     position: relative;
-      overflow: hidden;   
+    position: relative;
+    overflow: hidden;
 }
 
 footer:before {
-       content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-   background-image: url('asset/image/istock-portfolio-bg2.jpeg');
-     background-position: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('asset/image/istock-portfolio-bg2.jpeg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  transform: rotate(180deg) scale(2);
-  z-index: -1; /* Places the pseudo-element behind the content */
+    transform: rotate(180deg) scale(2);
+    z-index: -1;
+    /* Places the pseudo-element behind the content */
 }
 
 svg {
@@ -2072,7 +2083,7 @@ svg {
 }
 
 .screenHandlerContainer {
-gap: 3rem;
+    gap: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2080,7 +2091,7 @@ gap: 3rem;
 }
 
 .creatorContainer p {
-        margin: 1px 0 100px
+    margin: 1px 0 100px
 }
 
 .twitterLetter {
