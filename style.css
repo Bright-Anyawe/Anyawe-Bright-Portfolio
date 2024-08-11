@@ -651,7 +651,15 @@ body.active {
     }
 
     section.introductionContainer {
-        margin: 0 20px;
+        /* margin: 0 20px; */
+    }
+
+    div.introduction {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
     }
 
     .mobileScreenIntroEl {
@@ -665,7 +673,7 @@ body.active {
 
     .aboutMeContainer .introHeaderText {
         margin: 1rem 0 10px 0;
-        font-weight: 800;
+        /* font-weight: 800; */
     }
 
     .aboutMeContainer .aboutMeEl {
@@ -678,11 +686,11 @@ body.active {
 
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
-        max-width: 300px;
+        /* max-width: 300px; */
     }
 
     .langTechToolContainer {
-        margin: 0 0 0 50px;
+        /* margin: 0 0 0 50px; */
 
     }
 
@@ -904,8 +912,6 @@ body.active {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* font-size: 40px;
-                margin: 10px 0 5rem 0; */
         font-family: arial;
     }
 
@@ -1006,13 +1012,20 @@ body.active {
     }
 
 
-    .aboutMeContainer {
-        margin: 0 0 0 50px;
+    div.aboutMeContainer {
+        margin: 0 0 0 10px;
     }
 
     .aboutMeContainer .introHeaderText {
         margin: 1rem 0 10px 0;
-        font-weight: 800;
+        /* font-weight: 800; */
+    }
+
+    div.introduction {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .aboutMeContainer .aboutMeEl {
@@ -1025,11 +1038,11 @@ body.active {
 
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
-        max-width: 300px;
+        /* max-width: 300px; */
     }
 
     .langTechToolContainer {
-        margin: 0 0 0 50px;
+        /* margin: 0 0 0 50px; */
 
     }
 
