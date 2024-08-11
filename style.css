@@ -1491,7 +1491,19 @@ text-decoration: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('istock-portfolio-bg2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* .introductionContainer::before {
+ background-image: url('istock-portfolio-bg2.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+transform: scale(-1.1)
+} */
 
 .subTitle {
     display: flex;
@@ -1720,6 +1732,10 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+        /* background-image: url('asset/image/mesh-pf-bg.jpeg');
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .featuredProjectHeadcaption {
@@ -1881,12 +1897,36 @@ ul {
     border-radius: 10px;
 }
 
+
+
 .contactContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    position: relative;
+      overflow: hidden;   
+
+       
+
+}
+
+.contactContainer::before {
+      content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background-image: url('asset/image/istock-portfolio-bg2.jpeg');
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  transform: rotate(180deg) scale(2);
+  z-index: -1; /* Places the pseudo-element behind the content */
+
+    /* transform: rotate(270deg) */
 }
 
 .contactCaption {
@@ -1903,6 +1943,7 @@ ul {
 .contactCaption p {
     max-width: 500px;
     text-align: center;
+    font-size: 19px;
     margin: 0;
 }
 
@@ -1958,6 +1999,23 @@ textarea {
 footer {
     margin: 6rem 0 0 0;
     border-top: 1px solid black;
+     position: relative;
+      overflow: hidden;   
+}
+
+footer:before {
+       content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   background-image: url('asset/image/istock-portfolio-bg2.jpeg');
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  transform: rotate(180deg) scale(2);
+  z-index: -1; /* Places the pseudo-element behind the content */
 }
 
 svg {
