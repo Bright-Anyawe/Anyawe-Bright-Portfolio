@@ -51,3 +51,77 @@ function togglePageBackground() {
   bodyEl.classList.toggle("active");
 };
 toggleTheme.addEventListener("click", togglePageBackground);
+
+const dots = document.querySelectorAll(".dot");
+
+const pictureFrame = document.querySelector(".picture-frame");
+const nextEl = document.querySelector(".next");
+const previousEl = document.querySelector("#previous");
+
+
+const images = [
+  { src: "asset/image/todo-list image-with-a-person.jpg", alt: "To_Do_List" },
+  { src: "asset/image/sign-up-form.jpg", alt: "sign up form" },
+  { src: "asset/image/Screenshot (40).png", alt: "portfolio project" },
+];
+
+let currentIndex = 0;
+let slideshowInterval;
+
+
+function displayCurrentImage() {
+  pictureFrame.textContent = "";
+
+  
+  let toDoImg = document.createElement("img");
+  toDoImg.classList.add("toDoImg");
+  toDoImg.src = images[currentIndex].src;
+  toDoImg.alt = images[currentIndex].alt;
+
+  pictureFrame.appendChild(toDoImg);
+
+  
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentIndex);
+  });
+}
+displayCurrentImage();
+
+function startSlideshow() {
+  slideshowInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    displayCurrentImage();
+  }, 3000); 
+}
+
+
+const displayNextImage = () => {
+  
+  currentIndex = (currentIndex + 1) % images.length;
+  displayCurrentImage();
+  clearInterval(slideshowInterval);
+  startSlideshow();
+};
+
+const prevImage = () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  displayCurrentImage();
+  clearInterval(slideshowInterval);
+  startSlideshow();
+};
+
+nextEl.addEventListener("click", displayNextImage);
+previousEl.addEventListener("click", prevImage);
+
+function showSlides(index) {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+
+  currentIndex = index;
+  displayCurrentImage();
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => showSlides(index));
+});
