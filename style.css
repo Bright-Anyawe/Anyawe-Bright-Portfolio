@@ -197,6 +197,18 @@ body.active {
 
     }
 
+    section.introductionContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-image: url(istock-portfolio-bg2.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        padding: 10px 20px;
+    }
+
 
     .introductionContainer .subTitleContainer {
         display: flex;
@@ -220,19 +232,28 @@ body.active {
     }
 
     #developerImageOnMobile {
-        /* min-width: 230px;
-        max-width: 250px; */
+        width: 300px;
+        height: auto;
+        padding: 15px;
+
+        object-fit: cover;
+
         border-radius: 10px;
         margin: 0;
     }
 
 
     div.aboutMeContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
         margin: 0;
     }
 
     .aboutMeContainer .introHeaderText {
-        margin: 1rem 0 10px 0;
+        display: flex;
+        font-size: 1.3rem;
+        margin: 1.5rem 0 10px 0;
     }
 
     .aboutMeContainer .aboutMeEl {
@@ -245,7 +266,8 @@ body.active {
 
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
-        /* max-width: 300px; */
+        /* display: flex;
+        flex-direction: column; */
     }
 
     .langTechToolContainer {
@@ -258,10 +280,19 @@ body.active {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
+    }
+
+    div.experienceDescriptionContainer h3 {
+        text-align: center;
+        margin: 60px 0 10px;
+        font-weight: 600;
+        font-size: 1.5rem;
     }
 
     .experienceDescriptionContainer .experienceDescription {
         text-align: center;
+        font-size: 1.15rem;
     }
 
     main .courseContainer {
@@ -269,6 +300,9 @@ body.active {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
+        padding: 56px 20px;
+        margin: 0;
     }
 
     .courseInfo .subHeader {
@@ -280,18 +314,21 @@ body.active {
 
     .courseInfo .subHeader>h3, .featuredProjectHeadcaption>h3,
     .projectHeader h2, .contactHeadCaptionMobile>h2, .mobileFormContainer {
-        margin: 60px 0 10px 0;
+        margin: 30px 0 10px 0;
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 
     .subject, .contactHeadCaptionMobile .contactPEl {
         text-align: center;
         margin: 0;
+        padding: 10px;
     }
 
-    .skill {
+    p.skill {
         text-align: center;
 
-        font: 16px 'Arial'
+        font-size: 1.15rem;
     }
 
     .courseInfo .mobileScreenLogo {
@@ -306,8 +343,19 @@ body.active {
         flex-direction: column;
     }
 
+    figure .logo.mobileScreenLogo {
+        display: flex;
+        width: 291px;
+        padding: 0 14px;
+        height: auto;
+        transform: rotate(-0.7deg);
+        transform: skewX(-8deg);
+        transform: skew(12deg, -2deg);
+        object-fit: cover;
+    }
+
     .courseContainer .courseImgContainer {
-        display: none;
+        display: flex;
     }
 
     main .featuredProject {
@@ -315,46 +363,108 @@ body.active {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 15px;
     }
 
     .captionContainer, .subFeaturedProjectContainer .aboutFeaturedWork,
     .otherProjectsContainer .projectHeaderContainer {
         text-align: center;
+        font-size: 1.15rem;
     }
 
-    .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
-        margin: 0 0 10px 0;
+    div.featuredProjectHeadcaption {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
     }
+
+
+
+    .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
+        margin: 0 0 20px 0;
+        font-size: 1.15rem;
+    }
+
+    div.subFeaturedProjectContainer .buttons>button {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+
+    div.subFeaturedProjectContainer .buttons>button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    div.subFeaturedProjectContainer .buttons>button:first-child {
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 17px;
+        background-color: var(--Dominant-color);
+    }
+
+    div.subFeaturedProjectContainer .buttons>button:last-child {
+        padding: 10px;
+        border: 1px solid white;
+        border-radius: 6px;
+        font-size: 17px;
+        background-color: black;
+    }
+
+    div.firstProjectContainer, .secondProjectContainer, .thirdProjectContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    div.firstProjectContainer p, .secondProjectContainer p, .thirdProjectContainer p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        padding: 0 20px;
+        text-align: center;
+    }
+
 
     .featuredProject .subFeaturedProjectContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font: 16px 'Arial'
+        font: 16px 'Arial';
+        padding: 10px;
+        gap: 1rem;
     }
 
     .featuredProject .subFeaturedProjectContainer .showDesktop {
         display: block;
-        border: 1px solid black;
-        min-width: 250px;
-        max-width: 272px;
-        min-height: 200px;
-        max-height: 222px;
+        border: 1px solid rgb(228, 38, 38);
+        width: 272px;
+        height: auto;
         border-radius: 9px;
         padding: 10px;
+        /* border: 1px solid white; */
 
     }
 
     .featuredProject .subFeaturedProjectContainer .showMobile {
         display: block;
-        border: 1px solid black;
+        border: 1px solid rgb(228, 38, 38);
         max-width: 100px;
         min-height: 200px;
         max-height: 210px;
         border-radius: 9px;
         padding: 10px;
         margin: 0 0 20px 0;
+
     }
 
     .subFeaturedProjectContainer .deviceLayout {
@@ -384,7 +494,8 @@ body.active {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        border: 1px solid black;
+        border: 1px solid rgb(228, 38, 38);
+
         min-width: 250px;
         max-width: 250px;
         min-height: 170px;
@@ -489,6 +600,9 @@ body.active {
         width: 40px;
         height: 40px;
     }
+
+
+
 
 
 
@@ -687,6 +801,7 @@ body.active {
 
     }
 
+
     .experienceEl .experienceDescriptionContainer {
         display: flex;
         flex-direction: column;
@@ -697,6 +812,13 @@ body.active {
     .experienceDescriptionContainer .experienceDescription {
         text-align: center;
     }
+
+    /* div.experienceDescriptionContainer h3 {
+        text-align: center;
+        margin: 60px 0 10px;
+        font-weight: 600;
+        font-size: 1.5rem;
+    } */
 
     main .courseContainer {
         display: flex;
@@ -1601,6 +1723,7 @@ figure {
     min-width: 250px;
     min-height: 300px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 
@@ -1662,6 +1785,7 @@ ul {
 .experienceDescriptionContainer h3 {
     margin: 60px 0 10px;
     font-weight: 600;
+    font-size: 1.9rem;
 }
 
 
@@ -1672,6 +1796,7 @@ ul {
     align-items: center;
     text-align: center;
     max-width: 600px;
+    font-size: 1.2rem;
 }
 
 .courseContainer {
@@ -1679,11 +1804,13 @@ ul {
     justify-content: center;
     align-items: center;
     margin: 60px;
+    gap: 7rem;
 }
 
 .courseSubTitle h3 {
     font-weight: 700;
     text-align: center;
+    font-size: 1.5rem
 }
 
 
@@ -1691,20 +1818,24 @@ ul {
     border: 1px solid black;
 }
 
-.courseImgContainer {
-    min-height: 350px;
-    min-width: 550px;
+.logo.mobileScreenLogo {
+    /* display: block; */
+    /* min-height: 350px; */
+    width: 500px;
+    height: auto;
+    /* max-width: 600px; */
     transform: rotate(-0.7deg);
     transform: skewX(-8deg);
     transform: skew(12deg, -2deg);
-    background-image: url('asset/image/Odin-logo.jpg');
+    object-fit: cover;
+    /* background-image: url('asset/image/Odin-logo.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
 }
 
-.courseImgContainer:hover {
+.mobileScreenLogo:hover {
 
     -webkit-animation: kenburns-right 5s ease-out both;
     animation: kenburns-right 5s ease-out both;
@@ -1758,11 +1889,14 @@ ul {
 .courseInfoContainer h4, .subject {
     margin: 0;
     text-align: center;
+    font-size: 1.2rem;
     margin: 6px 0 10px;
 }
 
 .skill {
     text-align: center;
+    font-size: 1.2rem;
+    max-width: 400px;
 }
 
 .featuredProject {
@@ -1943,14 +2077,14 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    position: relative;
-    overflow: hidden;
+    /* position: relative;
+    overflow: hidden; */
 
 
 
 }
 
-.contactContainer::before {
+/* .contactContainer::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1963,10 +2097,10 @@ ul {
     background-size: cover;
     transform: rotate(180deg) scale(2);
     z-index: -1;
-    /* Places the pseudo-element behind the content */
+    Places the pseudo-element behind the content
 
-    /* transform: rotate(270deg) */
-}
+    transform: rotate(270deg)
+} */
 
 .contactCaption {
     display: flex;
@@ -2133,7 +2267,7 @@ svg {
 #toggleThemeModeContainer {
     position: relative;
     display: block;
-    width: 150px;
+    width: 100px;
     height: 50px;
     cursor: pointer;
     border-radius: 160px;
@@ -2177,7 +2311,7 @@ svg {
 
 
 #toggleThemeModeContainer.active .indicator {
-    left: 100px;
+    left: 50px;
     background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
     box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
         inset 0 4px 4px rgba(255, 255, 255, 1),
