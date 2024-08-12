@@ -220,14 +220,15 @@ body.active {
     }
 
     #developerImageOnMobile {
-        min-width: 230px;
-        max-width: 250px;
+        /* min-width: 230px;
+        max-width: 250px; */
+        border-radius: 10px;
         margin: 0;
     }
 
 
-    .aboutMeContainer {
-        margin: 0 0 0 50px;
+    div.aboutMeContainer {
+        margin: 0;
     }
 
     .aboutMeContainer .introHeaderText {
@@ -244,11 +245,11 @@ body.active {
 
     .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
     .briefNote, .aboutFeaturedWork, .contactPEl {
-        max-width: 300px;
+        /* max-width: 300px; */
     }
 
     .langTechToolContainer {
-        margin: 0 0 0 50px;
+        /* margin: 0 0 0 50px; */
 
     }
 
