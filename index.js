@@ -112,3 +112,16 @@ const prevImage = () => {
 
 nextEl.addEventListener("click", displayNextImage);
 previousEl.addEventListener("click", prevImage);
+
+function showSlides(index) {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+
+  currentIndex = index;
+  displayCurrentImage();
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => showSlides(index));
+});
