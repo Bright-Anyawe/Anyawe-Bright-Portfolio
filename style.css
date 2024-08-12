@@ -490,6 +490,10 @@ body.active {
         align-items: center;
     }
 
+    div.projectCarouselContainer {
+        display: none;
+    }
+
     .projectContainer .mobileScreen {
         display: flex;
         flex-direction: column;
@@ -925,6 +929,10 @@ body.active {
         align-items: center;
     }
 
+    div.projectCarouselContainer {
+        display: none;
+    }
+
     .projectContainer .mobileScreen {
         display: flex;
         flex-direction: column;
@@ -1272,7 +1280,11 @@ body.active {
         align-items: center;
     }
 
-    .projectContainer .mobileScreen {
+    div.projectCarouselContainer {
+        display: none;
+    }
+
+    div.projectContainer .mobileScreen {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -1283,7 +1295,7 @@ body.active {
         padding: 10px;
     }
 
-    .projectContainer {
+    div.projectContainer {
         display: flex;
         flex-direction: column;
         gap: 5rem
@@ -2055,7 +2067,7 @@ ul {
 }
 
 .projectContainer {
-    display: flex;
+    display: none;
     gap: 1rem;
 }
 
@@ -2070,6 +2082,108 @@ ul {
     border-radius: 10px;
 }
 
+.projectCarouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.carouselImg {
+
+    grid-area: 1 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.picture-frame {
+    border: 3px solid black;
+    background-color: rgba(204, 219, 62, 0.2);
+    border-radius: 7px;
+    width: 450px;
+    height: 450px;
+    margin: 0 0 15px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out
+}
+
+#previous {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.next {
+    grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.next>svg:hover {
+    background-image: grey;
+    border: 3 solid red;
+}
+
+#previous:hover {
+    background-image: grey;
+}
+
+
+
+svg {
+    width: 40px;
+    height: 40px;
+}
+
+img {
+    max-width: 445px;
+    height: 445px;
+    object-fit: cover;
+
+
+
+}
+
+
+
+#circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+.dot:hover {
+    background-color: #555;
+
+}
+
+.dot {
+    transition: background-color 0.3s ease;
+
+}
+
+.dot.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
 
 
 .contactContainer {
@@ -2078,30 +2192,14 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    /* position: relative;
-    overflow: hidden; */
+    position: relative;
+    overflow: hidden;
 
 
 
 }
 
-/* .contactContainer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('asset/image/istock-portfolio-bg2.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(180deg) scale(2);
-    z-index: -1;
-    Places the pseudo-element behind the content
 
-    transform: rotate(270deg)
-} */
 
 .contactCaption {
     display: flex;
@@ -2175,22 +2273,6 @@ footer {
     border-top: 1px solid black;
     position: relative;
     overflow: hidden;
-}
-
-footer:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('asset/image/istock-portfolio-bg2.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotate(180deg) scale(2);
-    z-index: -1;
-    /* Places the pseudo-element behind the content */
 }
 
 svg {
@@ -2268,7 +2350,7 @@ svg {
 #toggleThemeModeContainer {
     position: relative;
     display: block;
-    width: 100px;
+    width: 150px;
     height: 50px;
     cursor: pointer;
     border-radius: 160px;
@@ -2312,7 +2394,7 @@ svg {
 
 
 #toggleThemeModeContainer.active .indicator {
-    left: 50px;
+    left: 100px;
     background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
     box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
         inset 0 4px 4px rgba(255, 255, 255, 1),
