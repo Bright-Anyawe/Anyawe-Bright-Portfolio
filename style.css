@@ -1968,6 +1968,7 @@ ul {
     width: 450px;
     height: 450px;
     margin: 0 0 15px;
+    z-index: 1000;
     transition: opacity 0.3s ease-in-out
 }
 
