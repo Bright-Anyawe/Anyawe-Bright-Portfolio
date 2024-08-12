@@ -62,10 +62,10 @@ const previousEl = document.querySelector("#previous");
 const images = [
   { src: "asset/image/todo-list image-with-a-person.jpg", alt: "To_Do_List" },
   { src: "asset/image/sign-up-form.jpg", alt: "sign up form" },
-  { src: "asset/image/Pf-bg.jpeg", alt: "portfolio project" },
+  { src: "asset/image/Screenshot (40).png", alt: "portfolio project" },
 ];
 
-let currentIndex = 1;
+let currentIndex = 0;
 let slideshowInterval;
 
 
