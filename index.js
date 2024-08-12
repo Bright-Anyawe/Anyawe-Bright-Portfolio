@@ -51,3 +51,9 @@ function togglePageBackground() {
   bodyEl.classList.toggle("active");
 };
 toggleTheme.addEventListener("click", togglePageBackground);
+
+const dots = document.querySelectorAll(".dot");
+
+const pictureFrame = document.querySelector(".picture-frame");
+const nextEl = document.querySelector(".next");
+const previousEl = document.querySelector("#previous");
