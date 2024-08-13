@@ -914,6 +914,7 @@ body.active, a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
     }
 
     .experienceDescriptionContainer .experienceDescription {
@@ -954,7 +955,7 @@ body.active, a {
     }
 
     img.logo.mobileScreenLogo {
-        
+
         height: auto;
         max-width: 450px;
         transform: rotate(-0.7deg);
@@ -988,11 +989,13 @@ body.active, a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 30px;
     }
 
     .captionContainer, .subFeaturedProjectContainer .aboutFeaturedWork,
     .otherProjectsContainer .projectHeaderContainer {
         text-align: center;
+        max-width: 500px;
     }
 
     .featuredProjectHeadcaption .briefHeadNote, .projectHeader>p {
@@ -1093,16 +1096,15 @@ body.active, a {
     }
 
     .mobileFormContainer input {
-        min-width: 230px;
-        min-height: 25px;
-        max-width: 250px;
-        max-height: 30px;
+        /* min-width: 230px; */
+
+        max-width: 239px;
+        max-height: 50px;
         border-radius: 5px;
     }
 
     .mobileTextAreaInputEl {
         min-height: 80px;
-        min-width: 250px;
         max-width: 300px;
         border-radius: 5px;
 
@@ -1282,15 +1284,10 @@ body.active, a {
         font: 18px 'Arial';
     }
 
-    .aboutMeContainer .aboutMeEl, .aboutGoals, .experienceDescription, .skill,
-    .briefNote, .aboutFeaturedWork, .contactPEl {
-        /* max-width: 300px; */
-    }
+    /* max-width: 300px; */
 
-    .langTechToolContainer {
-        /* margin: 0 0 0 50px; */
 
-    }
+
 
     .experienceEl .experienceDescriptionContainer {
         display: flex;
@@ -1309,6 +1306,7 @@ body.active, a {
         justify-content: center;
         align-items: center;
         margin: 0;
+        max-height: 550px;
     }
 
     .courseInfo .subHeader {
@@ -1538,9 +1536,20 @@ header {
 .portfolioLogo svg {
     width: 90px;
     height: 100px;
-    animation: rotate 0.7s ease-in-out both;
 
 }
+
+
+.logoText {
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    animation: rotate 0.7s ease-in-out both;
+    margin-left: 10px;
+    color: var(--Dominant-color);
+}
+
 
 
 @keyframes rotate {
