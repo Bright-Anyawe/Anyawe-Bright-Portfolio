@@ -2365,7 +2365,7 @@ textarea {
 
 footer {
     margin: 6rem 0 0 0;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     position: relative;
     overflow: hidden;
 }
@@ -2389,6 +2389,10 @@ svg {
     position: relative;
     right: 10px;
 
+}
+
+.sitelogo a {
+    background-color: inherit;
 }
 
 .socialMediaSvgContainer svg {
@@ -2429,7 +2433,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     gap: 50px;
 }
 
@@ -2451,7 +2455,7 @@ hr {
     border-top: 2px solid grey;
     background-color: #555;
     padding: 0 50px
-    /* width: 250px;
+        /* width: 250px;
     height: 1px; */
 }
 
@@ -2465,18 +2469,21 @@ hr {
 
 .accessibiltyContainer {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 0 0 10px 0;
+    margin: 20px 0 40px 0;
 }
 
 .copyRightContainer {
     font-size: 1.1rem;
 }
 
-
+.copyRightContainer a {
+    background-color: inherit;
+    color: inherit;
+}
 
 #toggleThemeModeContainer {
     position: relative;
