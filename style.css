@@ -307,6 +307,7 @@ body.active, a {
         gap: 2rem;
         padding: 56px 20px;
         margin: 0;
+        max-height: 500px;
     }
 
     .courseInfo .subHeader {
@@ -604,16 +605,106 @@ body.active, a {
         align-items: center;
     }
 
+
+    div#toggleThemeModeContainer {
+        position: relative;
+        display: block;
+        width: 90px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 160px;
+        background-color: #222;
+        transition: 0.5s;
+        box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+            inset 0 8px 8px rgba(0, 0, 0, 0.1),
+            inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    div#toggleThemeModeContainer.active {
+        background: #fff;
+        box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+            inset 0 2px 8px rgba(0, 0, 0, 0.1),
+            inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    div#toggleThemeModeContainer .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(to bottom, #444, #222);
+        border-radius: 50%;
+        transform: scale(0.9);
+        box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
+            inset 0 4px 4px rgba(255, 255, 255, 0.2),
+            inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+        transition: 0.5s;
+    }
+
+    p.indicator svg {
+        transform: translate(3px, 9%);
+        fill: white;
+        width: 35px;
+        height: 34px;
+    }
+
+    div#toggleThemeModeContainer.active .indicator svg {
+        fill: black;
+    }
+
+
+    div#toggleThemeModeContainer.active .indicator {
+
+        left: 30px;
+        background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+        box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.1),
+            inset 0 4px 4px rgba(255, 255, 255, 1),
+            inset 0 -4px 4px rgba(255, 255, 255, 1);
+    }
+
+
+
     svg {
         width: 40px;
         height: 40px;
     }
 
+    .copyRightContainer p {
+        text-align: center;
+    }
 
 
+    .footerNav:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
 
+    .socialMediaElContainer {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
 
+    .socialMediaEl ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+    }
 
+    div.footerNavContianer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 100px 0;
+    }
 }
 
 
@@ -1039,6 +1130,15 @@ body.active, a {
     svg {
         width: 40px;
         height: 40px;
+    }
+
+    .socialMediaEl ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
     }
 }
 
@@ -2391,7 +2491,7 @@ svg {
 
 }
 
-.sitelogo a {
+.siteLogo a {
     background-color: inherit;
 }
 
@@ -2473,7 +2573,7 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 20px 0 40px 0;
+    margin: 0px 0 40px 0;
 }
 
 .copyRightContainer {
