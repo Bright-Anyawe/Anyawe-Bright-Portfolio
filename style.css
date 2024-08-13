@@ -2515,6 +2515,11 @@ svg {
     background-color: inherit;
 }
 
+.siteLogo .logoText {
+    font-size: 1.9rem;
+    margin: 0;
+}
+
 .socialMediaSvgContainer svg {
     width: 35px;
     height: 50px;
@@ -2561,6 +2566,8 @@ svg {
     display: flex;
     gap: 20px;
     padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .firstHLine, .secondHLine {
