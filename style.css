@@ -2555,6 +2555,8 @@ hr {
 
 .footerNav li, a {
     list-style-type: none;
+    padding: 3px 7px;
+    border-radius: 7px;
     /* color: rgb(8, 7, 7); */
     font-weight: 500;
     /* text-decoration: none; */
