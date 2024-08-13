@@ -8,6 +8,10 @@
     font-style: normal;
 }
 
+body {
+    background-color: #e2d8d8;
+}
+
 body.active {
     background-color: black;
     color: white;
@@ -1524,6 +1528,21 @@ nav a {
 }
 
 
+.one {
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: red;
+}
+
+.one::after {
+    content: '';
+    width: 1px;
+    height: 10px;
+    background-color: red;
+}
+
+
 .greetingTextContainer {
     display: flex;
     flex-direction: column;
@@ -1789,6 +1808,7 @@ span {
 }
 
 ul {
+    display: flex;
     list-style-type: circle;
     padding: 0 40px;
     line-height: 29px;
@@ -2123,7 +2143,7 @@ ul {
     font-size: 1.7rem;
 }
 
-.projectHeader p{
+.projectHeader p {
     font-size: 1.3rem;
     margin: 5px 0 15px 0;
 }
@@ -2367,6 +2387,10 @@ svg {
     height: 40px;
 }
 
+.socialMediaSvgContainer li {
+    list-style-type: none;
+}
+
 .socialMediaSvgContainer li>p {
     margin: 0;
 }
@@ -2382,17 +2406,36 @@ svg {
 
 .socialMediaElContainer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 45px;
+    flex-direction: column;
+}
+
+.socialMediaSubContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .socialMediaEl {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px;
+    gap: 50px;
 }
+
+.socialMediaEl ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+
+.firstHLine hr, .secondHLine hr {
+    border-top: 2px solid grey;
+ background-color: #555;
+    width: 250px;
+    height: 1px;
+}
+
 
 .screenHandlerContainer {
     gap: 3rem;
