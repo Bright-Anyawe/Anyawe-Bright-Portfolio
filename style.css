@@ -1845,7 +1845,7 @@ ul {
 }
 
 .logo.mobileScreenLogo {
-  
+
     /* width: 500px; */
     height: auto;
     max-width: 600px;
@@ -1853,7 +1853,7 @@ ul {
     transform: skewX(-8deg);
     transform: skew(12deg, -2deg);
     object-fit: cover;
-   
+
 
 }
 
@@ -1943,9 +1943,29 @@ ul {
 
 .featuredProjectHeadcaption h3 {
     font-weight: 700;
+    font-size: 1.7rem;
 }
 
-.logo {}
+.briefHeadNote {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+.aboutFeaturedWorkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+.aboutFeaturedWork {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* .logo {} */
 
 .mobileResponsive, .showMobile {
     display: none;
@@ -2056,9 +2076,32 @@ ul {
 }
 
 .buttons button {
-    padding: 5px;
+    padding: 10px;
     font-size: 17px;
 }
+
+.buttons button:first-child {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color: var(--Dominant-color);
+}
+
+.buttons button:last-child {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color: black;
+
+}
+
+.buttons button:first-child a, .buttons button:last-child a {
+    color: white;
+    text-decoration: none;
+}
+
 
 .otherProjectsContainer {
     display: flex;
@@ -2076,6 +2119,13 @@ ul {
 
 .projectHeader h2 {
     margin: 80px 0 0 0;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.projectHeader p{
+    font-size: 1.3rem;
+    margin: 5px 0 15px 0;
 }
 
 .projectContainer {
