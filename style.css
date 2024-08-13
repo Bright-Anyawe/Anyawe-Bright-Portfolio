@@ -2409,7 +2409,7 @@ svg {
     flex-direction: column;
 }
 
-.socialMediaSubContainer {
+.subMediaContainer {
     display: flex;
     flex-direction: column;
 }
@@ -2418,7 +2418,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     gap: 50px;
 }
 
@@ -2431,19 +2431,25 @@ svg {
 
 .firstHLine hr, .secondHLine hr {
     border-top: 2px solid grey;
- background-color: #555;
+    background-color: #555;
     width: 250px;
     height: 1px;
 }
 
 
-.screenHandlerContainer {
-    gap: 3rem;
+.accessibiltyContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    margin: 0 0 90px 0;
 }
+
+.copyRightContainer {
+    font-size: 20px;
+}
+
 
 .creatorContainer p {
     margin: 1px 0 100px
