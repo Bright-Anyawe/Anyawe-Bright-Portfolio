@@ -2254,10 +2254,6 @@ img {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    position: relative;
-    overflow: hidden;
-
-
 
 }
 
@@ -2268,19 +2264,26 @@ img {
     align-items: center;
 }
 
+form input {
+    maring: 0 0 10px 0;
+}
+
 .contactCaption h2 {
     margin: 70px 0 10px 0;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
 
 .contactCaption p {
     max-width: 500px;
     text-align: center;
-    font-size: 19px;
+    font-size: 1.25rem;
     margin: 0;
 }
 
 form input {
     padding: 10px;
+    margin: 0 0 15px 0;
     min-width: 360px;
     border-radius: 5px;
 }
@@ -2310,11 +2313,14 @@ textarea {
     color: white;
     font-weight: 600;
     margin: 20px 0 0 0;
+    padding: 8px;
     transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 .submit :nth-child(2), .submit :nth-child(1) {
     margin: 0;
+    font-size: 1.2rem;
 }
 
 .submit:hover {
