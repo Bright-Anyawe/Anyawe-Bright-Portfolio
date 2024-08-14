@@ -39,7 +39,7 @@ a {
 
   #toggleMenuIcon {
     position: fixed;
-    top: 30px;
+    top: 45px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -104,6 +104,10 @@ a {
     padding: 0;
   }
 
+  ul.sideBar {
+    margin: 40px 0 0 10px;
+  }
+
   #firstSideBarContainer li {
     list-style: none;
     display: inline-block;
@@ -121,6 +125,8 @@ a {
     color: black;
     font-size: 1.2rem;
     letter-spacing: 2px;
+    background-color: inherit;
+    font-weight: 500;
   }
 
   header #navList {
@@ -252,15 +258,37 @@ a {
     font: 18px "Arial";
   }
 
-  .aboutMeContainer .aboutMeEl,
-  .aboutGoals,
-  .experienceDescription,
-  .skill,
-  .briefNote,
-  .aboutFeaturedWork,
-  .contactPEl {}
+  span.figurePlusTop {
+    position: relative;
+    top: -10rem;
+    left: 15px;
+    font-weight: 900;
+    font-size: 20px;
+  }
 
-  .langTechToolContainer {}
+  span.figurePlusButtom1 {
+    position: relative;
+    top: 9.8rem;
+    right: -20px;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  span.figurePlusButtom {
+    position: relative;
+    top: 10rem;
+    right: 15px;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  span.figurePlusTop2 {
+    position: relative;
+    top: -8.8rem;
+    right: 29px;
+    font-weight: 900;
+    font-size: 20px;
+  }
 
   .experienceEl .experienceDescriptionContainer {
     display: flex;
@@ -578,6 +606,22 @@ a {
     fill: rgb(73, 73, 197);
   }
 
+  .firstHLine,
+  .secondHLine {
+    display: none;
+    width: 40%;
+    height: 1px;
+  }
+
+  div.socialMediaEl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px 0;
+    padding: 0;
+    gap: 50px;
+  }
+
   .mobileLogoContainer {
     display: flex;
     justify-content: space-between;
@@ -792,6 +836,12 @@ a {
     color: black;
     font-size: 1.2rem;
     letter-spacing: 2px;
+    background-color: inherit;
+    font-weight: 500;
+  }
+
+  ul.sideBar {
+    margin: 40px 0 0 15px;
   }
 
   .greetingTextContainer .hi {
@@ -1115,6 +1165,13 @@ a {
     align-items: center;
     gap: 20px;
     padding: 0;
+  }
+
+  .firstHLine,
+  .secondHLine {
+    display: none;
+    width: 40%;
+    height: 1px;
   }
 }
 
@@ -1628,6 +1685,7 @@ nav a {
   margin: 0 0 20px;
   font-size: 20px;
   color: rgb(34, 29, 29);
+  font-weight: 500;
 }
 
 .btnContainer {
