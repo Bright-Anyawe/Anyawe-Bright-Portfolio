@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: 'arial' */
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -37,9 +36,6 @@ a {
     height: 100px;
   }
 
-  /* header #toggleMenuIcon {
-        display: block;
-    } */
 
   #toggleMenuIcon {
     position: fixed;
@@ -176,7 +172,6 @@ a {
     align-items: center;
     text-align: center;
 
-    /* max-width: 300px; */
     padding: 15px;
     font-size: 17px;
   }
@@ -202,10 +197,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url(istock-portfolio-bg2.jpeg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; */
     padding: 10px 20px;
   }
 
@@ -267,14 +258,9 @@ a {
   .skill,
   .briefNote,
   .aboutFeaturedWork,
-  .contactPEl {
-    /* display: flex;
-        flex-direction: column; */
-  }
+  .contactPEl {}
 
-  .langTechToolContainer {
-    /* margin: 0 0 0 50px; */
-  }
+  .langTechToolContainer {}
 
   .experienceEl .experienceDescriptionContainer {
     display: flex;
@@ -314,10 +300,10 @@ a {
     align-items: center;
   }
 
-  .courseInfo .subHeader > h3,
-  .featuredProjectHeadcaption > h3,
+  .courseInfo .subHeader>h3,
+  .featuredProjectHeadcaption>h3,
   .projectHeader h2,
-  .contactHeadCaptionMobile > h2,
+  .contactHeadCaptionMobile>h2,
   .mobileFormContainer {
     margin: 30px 0 10px 0;
     font-size: 1.5rem;
@@ -388,24 +374,24 @@ a {
   }
 
   .featuredProjectHeadcaption .briefHeadNote,
-  .projectHeader > p {
+  .projectHeader>p {
     margin: 0 0 20px 0;
     font-size: 1.15rem;
   }
 
-  div.subFeaturedProjectContainer .buttons > button {
+  div.subFeaturedProjectContainer .buttons>button {
     padding: 10px;
     border: none;
     border-radius: 6px;
     font-size: 17px;
   }
 
-  div.subFeaturedProjectContainer .buttons > button a {
+  div.subFeaturedProjectContainer .buttons>button a {
     color: white;
     text-decoration: none;
   }
 
-  div.subFeaturedProjectContainer .buttons > button:first-child {
+  div.subFeaturedProjectContainer .buttons>button:first-child {
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -413,7 +399,7 @@ a {
     background-color: var(--Dominant-color);
   }
 
-  div.subFeaturedProjectContainer .buttons > button:last-child {
+  div.subFeaturedProjectContainer .buttons>button:last-child {
     padding: 10px;
     border: 1px solid white;
     border-radius: 6px;
@@ -460,7 +446,6 @@ a {
     height: auto;
     border-radius: 9px;
     padding: 10px;
-    /* border: 1px solid white; */
   }
 
   .featuredProject .subFeaturedProjectContainer .showMobile {
@@ -483,7 +468,7 @@ a {
     gap: 1rem;
   }
 
-  .subFeaturedProjectContainer .buttons > button {
+  .subFeaturedProjectContainer .buttons>button {
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -516,7 +501,6 @@ a {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* margin: 10px; */
   }
 
   .projectContainer {
@@ -573,7 +557,7 @@ a {
     border-radius: 5px;
   }
 
-  .mobileFormContainer > p {
+  .mobileFormContainer>p {
     margin: 16px 0 0 0;
   }
 
@@ -590,7 +574,7 @@ a {
     border-radius: 9px;
   }
 
-  .mobileSendBtnContainer > button .mobileSubmitInputEl svg {
+  .mobileSendBtnContainer>button .mobileSubmitInputEl svg {
     fill: rgb(73, 73, 197);
   }
 
@@ -604,8 +588,6 @@ a {
   .mobileGmailLogoContainer,
   .mobileTweetLogoContainer {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -708,8 +690,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* font-size: 40px;
-                margin: 10px 0 5rem 0; */
     font-family: arial;
   }
 
@@ -837,7 +817,6 @@ a {
     align-items: center;
     text-align: center;
 
-    /* max-width: 300px; */
     padding: 15px;
     font-size: 19px;
   }
@@ -857,9 +836,7 @@ a {
     font-size: 15px;
   }
 
-  section.introductionContainer {
-    /* margin: 0 20px; */
-  }
+  section.introductionContainer {}
 
   div.introduction {
     display: flex;
@@ -879,7 +856,6 @@ a {
 
   .aboutMeContainer .introHeaderText {
     margin: 1rem 0 10px 0;
-    /* font-weight: 800; */
   }
 
   .aboutMeContainer .aboutMeEl {
@@ -896,13 +872,9 @@ a {
   .skill,
   .briefNote,
   .aboutFeaturedWork,
-  .contactPEl {
-    /* max-width: 300px; */
-  }
+  .contactPEl {}
 
-  .langTechToolContainer {
-    /* margin: 0 0 0 50px; */
-  }
+  .langTechToolContainer {}
 
   .experienceEl .experienceDescriptionContainer {
     display: flex;
@@ -916,12 +888,6 @@ a {
     text-align: center;
   }
 
-  /* div.experienceDescriptionContainer h3 {
-        text-align: center;
-        margin: 60px 0 10px;
-        font-weight: 600;
-        font-size: 1.5rem;
-    } */
 
   main .courseContainer {
     display: flex;
@@ -939,10 +905,10 @@ a {
     align-items: center;
   }
 
-  .courseInfo .subHeader > h3,
-  .featuredProjectHeadcaption > h3,
+  .courseInfo .subHeader>h3,
+  .featuredProjectHeadcaption>h3,
   .projectHeader h2,
-  .contactHeadCaptionMobile > h2,
+  .contactHeadCaptionMobile>h2,
   .mobileFormContainer {
     margin: 50px 0 10px 0;
   }
@@ -998,7 +964,7 @@ a {
   }
 
   .featuredProjectHeadcaption .briefHeadNote,
-  .projectHeader > p {
+  .projectHeader>p {
     margin: 0 0 10px 0;
   }
 
@@ -1031,7 +997,7 @@ a {
     gap: 1rem;
   }
 
-  .subFeaturedProjectContainer .buttons > button {
+  .subFeaturedProjectContainer .buttons>button {
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -1096,7 +1062,6 @@ a {
   }
 
   .mobileFormContainer input {
-    /* min-width: 230px; */
 
     max-width: 239px;
     max-height: 50px;
@@ -1109,7 +1074,7 @@ a {
     border-radius: 5px;
   }
 
-  .mobileFormContainer > p {
+  .mobileFormContainer>p {
     margin: 16px 0 0 0;
   }
 
@@ -1135,8 +1100,6 @@ a {
   .mobileGmailLogoContainer,
   .mobileTweetLogoContainer {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -1215,13 +1178,13 @@ a {
     background-color: white;
   }
 
-  #navList li > a {
+  #navList li>a {
     text-decoration: none;
     color: rgb(240, 14, 14);
     background-color: transparent;
   }
 
-  #navList li > a:hover {
+  #navList li>a:hover {
     background-color: rgb(188, 236, 15);
   }
 
@@ -1230,7 +1193,6 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* max-width: 300px; */
     font-size: 19px;
     padding: 0 15px;
   }
@@ -1260,7 +1222,6 @@ a {
 
   .aboutMeContainer .introHeaderText {
     margin: 1rem 0 10px 0;
-    /* font-weight: 800; */
   }
 
   div.introduction {
@@ -1278,7 +1239,6 @@ a {
     font: 18px "Arial";
   }
 
-  /* max-width: 300px; */
 
   .experienceEl .experienceDescriptionContainer {
     display: flex;
@@ -1307,10 +1267,10 @@ a {
     align-items: center;
   }
 
-  .courseInfo .subHeader > h3,
-  .featuredProjectHeadcaption > h3,
+  .courseInfo .subHeader>h3,
+  .featuredProjectHeadcaption>h3,
   .projectHeader h2,
-  .contactHeadCaptionMobile > h2,
+  .contactHeadCaptionMobile>h2,
   .mobileFormContainer {
     margin: 50px 0 10px 0;
   }
@@ -1355,7 +1315,7 @@ a {
   }
 
   .featuredProjectHeadcaption .briefHeadNote,
-  .projectHeader > p {
+  .projectHeader>p {
     margin: 0 0 10px 0;
   }
 
@@ -1388,7 +1348,7 @@ a {
     gap: 1rem;
   }
 
-  .subFeaturedProjectContainer .buttons > button {
+  .subFeaturedProjectContainer .buttons>button {
     padding: 10px;
     border: none;
     border-radius: 6px;
@@ -1462,7 +1422,7 @@ a {
     border-radius: 5px;
   }
 
-  .mobileFormContainer > p {
+  .mobileFormContainer>p {
     margin: 16px 0 0 0;
   }
 
@@ -1488,8 +1448,6 @@ a {
   .mobileGmailLogoContainer,
   .mobileTweetLogoContainer {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
     align-items: center;
   }
 
@@ -1580,10 +1538,6 @@ nav {
   border: 1px solid rgb(216, 214, 214);
 }
 
-/* ul.sidebar {
-    display: block;
-
-} */
 
 nav ul {
   width: 100%;
@@ -1609,7 +1563,7 @@ nav a {
   color: black;
 }
 
-#navList li > a {
+#navList li>a {
   text-decoration: none;
   color: var(--Dominant-color);
   background-color: transparent;
@@ -1617,7 +1571,7 @@ nav a {
   transition: 0.3s;
 }
 
-#navList li > a:hover {
+#navList li>a:hover {
   background-color: rgb(188, 236, 15);
 }
 
@@ -1700,7 +1654,6 @@ nav a {
 
 .btnContainer button {
   border: none;
-  /* border: 1px solid var(--logo-color); */
   background-color: var(--Dominant-color);
   color: white;
   font-weight: 600;
@@ -1748,13 +1701,6 @@ button.ResumeBtn {
   padding: 10px 20px;
 }
 
-/* .introductionContainer::before {
- background-image: url('istock-portfolio-bg2.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-transform: scale(-1.1)
-} */
 
 .subTitle {
   display: flex;
@@ -1827,7 +1773,6 @@ figure {
 
 span {
   color: var(--Dominant-color);
-  /* background-color: brown; */
   border-radius: 10px;
   transform: rotate(180deg);
   transform: scale3d(1.9);
@@ -1894,7 +1839,6 @@ span {
   justify-content: center;
   align-items: center;
   padding: 0 50px;
-  /* margin: 60px; */
   gap: 3rem;
 }
 
@@ -1909,7 +1853,6 @@ span {
 }
 
 .logo.mobileScreenLogo {
-  /* width: 500px; */
   height: auto;
   max-width: 600px;
   transform: rotate(-0.7deg);
@@ -1923,18 +1866,7 @@ span {
   animation: kenburns-right 5s ease-out both;
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2024-8-8 11:53:46
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
 
-/**
- * ----------------------------------------
- * animation kenburns-right
- * ----------------------------------------
- */
 @-webkit-keyframes kenburns-right {
   0% {
     -webkit-transform: scale(1) translate(0, 0);
@@ -1986,10 +1918,6 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-image: url('asset/image/mesh-pf-bg.jpeg');
-     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .featuredProjectHeadcaption {
@@ -2022,7 +1950,6 @@ span {
   text-align: center;
 }
 
-/* .logo {} */
 
 .mobileResponsive,
 .showMobile {
@@ -2040,7 +1967,6 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
   min-width: 700px;
   max-width: 900px;
   min-height: 300px;
@@ -2061,7 +1987,6 @@ span {
 
 .desktopImageContainer:hover,
 .mobileImageContainer:hover {
-  /* animation: shack 2s ease 2 alternate; */
   -webkit-animation: kenburns-bottom 5s ease-out both;
   animation: kenburns-bottom 5s ease-out both;
 }
@@ -2098,15 +2023,6 @@ span {
   }
 }
 
-/* @keyframes shack {
-    from {
-        transform: scale(1.4);
-    }
-
-    to {
-        transform: scale(1);
-    }
-} */
 
 .mobileImageContainer {
   background-image: url("asset/image/To-do project-mobile.png");
@@ -2237,7 +2153,7 @@ span {
   align-self: center;
 }
 
-.next > svg:hover {
+.next>svg:hover {
   background-image: grey;
   border: 3 solid red;
 }
@@ -2305,7 +2221,7 @@ img {
 }
 
 form input {
-  maring: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .contactCaption h2 {
@@ -2376,7 +2292,6 @@ textarea {
 
 footer {
   margin: 6rem 0 0 0;
-  /* border-top: 1px solid black; */
   position: relative;
   overflow: hidden;
 }
@@ -2405,21 +2320,26 @@ svg {
 }
 
 .siteLogo .logoText {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   margin: 0;
 }
 
 .socialMediaSvgContainer svg {
-  width: 35px;
+  width: 40px;
   height: 50px;
   cursor: pointer;
+}
+
+li.linkedInSvgContainer svg {
+  width: 30px;
+
 }
 
 .socialMediaSvgContainer li {
   list-style-type: none;
 }
 
-.socialMediaSvgContainer li > p {
+.socialMediaSvgContainer li>p {
   margin: 0;
 }
 
@@ -2461,8 +2381,6 @@ svg {
 
 .firstHLine,
 .secondHLine {
-  /* border-top: 2px solid grey;
-    background-color: #555; */
   width: 40%;
   height: 1px;
 }
@@ -2471,24 +2389,15 @@ hr {
   border-top: 2px solid grey;
   background-color: #555;
   padding: 0 50px;
-  /* width: 250px;
-    height: 1px; */
 }
 
-/* .firstHLine hr, .secondHLine hr {
-    border-top: 2px solid grey;
-    background-color: #555;
-    width: 250px;
-    height: 1px;
-} */
 
 .accessibiltyContainer {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  margin: 0px 0 40px 0;
+  margin: 0px 0 20px 0;
 }
 
 .copyRightContainer {
@@ -2575,7 +2484,8 @@ hr {
   list-style-type: none;
   padding: 3px 7px;
   border-radius: 7px;
-  /* color: rgb(8, 7, 7); */
-  font-weight: 500;
-  /* text-decoration: none; */
+  color: inherit;
+  background-color: inherit;
+  font-weight: 600;
+  text-decoration: none;
 }
