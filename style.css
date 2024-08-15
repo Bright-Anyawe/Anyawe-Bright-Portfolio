@@ -914,6 +914,7 @@ a {
 
   .aboutMeContainer .aboutGoals {
     font: 18px "Arial";
+    line-height: 1.37;
   }
 
   .aboutMeContainer .aboutMeEl,
@@ -1895,6 +1896,7 @@ span {
   text-align: center;
   max-width: 600px;
   font-size: 1.2rem;
+  line-height: 1.37;
 }
 
 .courseContainer {
