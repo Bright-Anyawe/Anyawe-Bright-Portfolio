@@ -256,6 +256,8 @@ a {
 
   .aboutMeContainer .aboutGoals {
     font: 18px "Arial";
+    word-spacing: 2.8px;
+    line-height: 1.35;
   }
 
   span.figurePlusTop {
@@ -343,6 +345,7 @@ a {
     text-align: center;
     margin: 0;
     padding: 10px;
+    word-spacing: 2.8px;
   }
 
   p.skill {
@@ -391,6 +394,7 @@ a {
   .otherProjectsContainer .projectHeaderContainer {
     text-align: center;
     font-size: 1.15rem;
+    word-spacing: 2.8px;
   }
 
   div.featuredProjectHeadcaption {
@@ -531,7 +535,7 @@ a {
     background-repeat: no-repeat;
   }
 
-  .projectContainer {
+  div.projectContainer {
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -915,6 +919,7 @@ a {
   .aboutMeContainer .aboutGoals {
     font: 18px "Arial";
     line-height: 1.37;
+    word-spacing: 2.8px;
   }
 
   .aboutMeContainer .aboutMeEl,
@@ -937,6 +942,7 @@ a {
 
   .experienceDescriptionContainer .experienceDescription {
     text-align: center;
+    word-spacing: 2.8px;
   }
 
 
@@ -1295,6 +1301,8 @@ a {
 
   .aboutMeContainer .aboutGoals {
     font: 18px "Arial";
+    line-height: 1.4;
+    word-spacing: 1.3px;
   }
 
 
@@ -1307,6 +1315,8 @@ a {
 
   .experienceDescriptionContainer .experienceDescription {
     text-align: center;
+    line-height: 1.4;
+    word-spacing: 1.3px;
   }
 
   main .courseContainer {
@@ -1337,6 +1347,8 @@ a {
   .contactHeadCaptionMobile .contactPEl {
     text-align: center;
     margin: 0;
+    line-height: 1.4;
+    word-spacing: 1.3px;
   }
 
   .skill {
@@ -1370,6 +1382,8 @@ a {
   .subFeaturedProjectContainer .aboutFeaturedWork,
   .otherProjectsContainer .projectHeaderContainer {
     text-align: center;
+    line-height: 1.4;
+    word-spacing: 1.3px;
   }
 
   .featuredProjectHeadcaption .briefHeadNote,
@@ -1903,8 +1917,9 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 50px;
-  gap: 3rem;
+  /* padding: 0 50px; */
+  margin: 40px 47px 0 30px;
+  gap: 7rem;
 }
 
 .courseSubTitle h3 {
@@ -1919,7 +1934,7 @@ span {
 
 .logo.mobileScreenLogo {
   height: auto;
-  max-width: 600px;
+  width: 600px;
   transform: rotate(-0.7deg);
   transform: skewX(-8deg);
   transform: skew(12deg, -2deg);
@@ -1975,6 +1990,7 @@ span {
 .skill {
   text-align: center;
   font-size: 1.2rem;
+  word-spacing: 2.8px;
   max-width: 600px;
 }
 
