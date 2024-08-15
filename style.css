@@ -340,7 +340,7 @@ a {
     font-weight: 500;
   }
 
-  div.contactHeadCaptionMobile>h2, .mobileFormContainer {
+  div.contactHeadCaptionMobile>h2 {
     margin: 30px 0 10px 0;
     font-size: 1.5rem;
     font-weight: 500;
@@ -739,7 +739,7 @@ div.footerNavContianer {
   align-items: center;
   margin: 0 0 100px 0;
 }
-}
+
 
 @media (min-width: 501px) and (max-width: 659px) {
   body header {
