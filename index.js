@@ -46,11 +46,11 @@ function toggleMenu() {
 toggleEl.addEventListener("click", toggleMenu);
 
 
-function togglePageBackground() {
+function togglePageBackgroundColor() {
   toggleTheme.classList.toggle("active");
   bodyEl.classList.toggle("active");
 };
-toggleTheme.addEventListener("click", togglePageBackground);
+toggleTheme.addEventListener("click", togglePageBackgroundColor);
 
 const dots = document.querySelectorAll(".dot");
 
