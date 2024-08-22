@@ -7,9 +7,9 @@ console.log(navLinks);
 const menuSvg = document.querySelector(".menuSvgContainer");
 const body = document.querySelector("body");
 const workBtnEl = document.querySelector(".viewWorkBtn"); 
-let prevScrollPos = window.scrollY;
 const toggleTheme = document.querySelector("#toggleThemeModeContainer");
 const bodyEl = document.querySelector('body');
+let prevScrollPos = window.scrollY;
 
 window.onscroll = function () {
   let currentScrollPos = window.scrollY;
@@ -22,7 +22,6 @@ window.onscroll = function () {
     document.querySelector("nav").style.top = "-80px";
     document.querySelector("#toggleMenuIcon").style.top = "-80px";
 
-    
   }
   prevScrollPos = currentScrollPos;
 };

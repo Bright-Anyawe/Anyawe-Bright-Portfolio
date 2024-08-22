@@ -50,7 +50,6 @@ a {
     align-items: center;
     border-radius: 8px;
     transition: top 0.3s;
-
     z-index: 1000;
   }
 
@@ -458,6 +457,11 @@ a {
     gap: 1rem;
   }
 
+  .firstProjectTitle, .secondprojectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
   div.firstProjectContainer p,
   .secondProjectContainer p,
   .thirdProjectContainer p {
@@ -532,13 +536,13 @@ a {
     flex-direction: column;
     gap: 2rem;
     border: 1px solid rgb(228, 38, 38);
-
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 170px;
+    /* min-width: 250px; */
+    max-width: 350px;
+    min-height: 190px;
     border-radius: 9px;
     padding: 10px;
-    background-image: url("asset/image/Dashboard.jpg");
+    font-size: 1.5rem;
+    /* background-image: url(asset/image/Dashboard.jpg); */
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -547,7 +551,11 @@ a {
   div.projectContainer {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    /* gap: 5rem; */
+  }
+
+  .firstProjectTitleContainer, .secondProjectTitleContainer {
+    text-align: center;
   }
 
   .firstProjectContainer,
@@ -557,7 +565,8 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+    margin: 0rem 0 3rem 0;
+    }
 
   .firstProjectContainer p,
   .secondProjectContainer p,
@@ -901,7 +910,6 @@ a {
     font-size: 15px;
   }
 
-  section.introductionContainer {}
 
   div.introduction {
     display: flex;
@@ -2206,7 +2214,7 @@ span {
 }
 
 .desktopScreen {
-  background-image: url("asset/image/Screenshot (4).png");
+  /* background-image: url("asset/image/Screenshot (4).png"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
