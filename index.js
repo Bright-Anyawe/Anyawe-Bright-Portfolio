@@ -60,7 +60,7 @@ const previousEl = document.querySelector("#previous");
 
 const images = [
   { src: "asset/image/todo-list image-with-a-person.jpg", alt: "To_Do_List" },
-  { src: "asset/image/sign-up-form.jpg", alt: "sign up form" },
+  { src: "asset/image/WeatherApp.jpg", alt: "weather app" },
   { src: "asset/image/Screenshot (40).png", alt: "portfolio project" },
 ];
 

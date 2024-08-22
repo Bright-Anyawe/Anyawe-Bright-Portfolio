@@ -535,17 +535,23 @@ a {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    border: 1px solid rgb(228, 38, 38);
-    /* min-width: 250px; */
+    /* border: none; */
+    min-width: 250px;
     max-width: 350px;
     min-height: 190px;
     border-radius: 9px;
     padding: 10px;
     font-size: 1.5rem;
-    /* background-image: url(asset/image/Dashboard.jpg); */
+    background-image: url('asset/image/WeatherApp.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  .secondProject img{
+    width: 330px;
+    height: auto;
+    object-fit: contain;
   }
 
   div.projectContainer {
@@ -558,7 +564,7 @@ a {
     text-align: center;
   }
 
-  .firstProjectContainer,
+  /* .firstProjectContainer,
   .secondProjectContainer,
   .thirdProjectContainer {
     display: flex;
@@ -566,7 +572,7 @@ a {
     align-items: center;
     flex-direction: column;
     margin: 0rem 0 3rem 0;
-    }
+  } */
 
   .firstProjectContainer p,
   .secondProjectContainer p,
@@ -1446,6 +1452,10 @@ a {
     font-size: 17px;
   }
 
+div#projectMainContainer {
+  display: none;
+}
+
   main .otherProjectsContainer {
     display: flex;
     flex-direction: column;
@@ -1670,6 +1680,9 @@ nav a {
   animation-duration: 3s;
   animation-name: slidein;
 }
+
+
+.
 
 .one {
   content: "";
