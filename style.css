@@ -548,7 +548,7 @@ a {
     background-repeat: no-repeat;
   }
 
-  .secondProject img{
+  .secondProject img {
     width: 330px;
     height: auto;
     object-fit: contain;
@@ -1452,9 +1452,9 @@ a {
     font-size: 17px;
   }
 
-div#projectMainContainer {
-  display: none;
-}
+  div#projectMainContainer {
+    display: none;
+  }
 
   main .otherProjectsContainer {
     display: flex;
@@ -1682,7 +1682,9 @@ nav a {
 }
 
 
-.
+#projectMainContainer {
+  display: none;
+}
 
 .one {
   content: "";
