@@ -329,6 +329,10 @@ a {
     align-items: center;
   }
 
+  div#projectMainContainer {
+    display: block;
+  }
+
   .courseInfo .subHeader>h3,
   .featuredProjectHeadcaption>h3,
   .projectHeader h2,
