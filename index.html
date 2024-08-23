@@ -165,9 +165,6 @@
 
     <section class='courseContainer'>
 
-      <!-- <img class='logo'>
-
-      </img> -->
 
       <div class='courseInfo'>
         <div class='courseSubTitle'>
@@ -255,27 +252,23 @@
 
 
         <div class='projectContainer'>
-<!-- 
-<div class='firstProjectTitleContainer'>
-            <h3 class='firstProjectTitle'>Admin Dashboard</h3>
-</div>
 
-          <div class='firstProjectContainer'>
+         <div class='firstProjectContainer'>
+           <div class='firstProjectTitleContainer'>
+           <h3 class='firstprojectTitle'>Admin Dashbaord App</h3>
 
-            <div class='firstProject mobileScreen desktopScreen'>
-               <p> This project(admin dashboard) is mostly layed-out with css grid
-               which serve as a prove that css grid is very handy in my tool kits
-              </p>
+          </div>
 
-            </div> -->
+          <div class='firstProject mobileScreen desktopScreen'>
+            
+            <img src='asset/image/Dashboard_mobile.jpg' alt='Dashboard_mobile image'>
+            </div>
 
         <div class='buttons'>
           <button> <a href='https://bright-anyawe.github.io/TOP-Admin-Dashboard/'>Live Website</a> </button>
           <button> <a href='https://github.com/Bright-Anyawe/TOP-Admin-Dashboard/tree/responsiveDashboard'>View on Github </a> </button>
         </div>
-             <!-- <p> This project(admin dashboard) is mostly layed-out with css grid
-               which serve as a prove that css grid is very handy in my tool kits
-              </p>  -->
+        </div>
 
           </div>
 
@@ -295,33 +288,10 @@
           <button> <a href='https://bright-anyawe.github.io/TOP-Weather-Forecast-Project/'>Live Website</a> </button>
           <button> <a href='#'>View on Github </a> </button>
         </div>
-            <!-- <p>This project here also is the exploration of promises, async and fetch api, 
-              where the api is use to fetch weather data for the user's entered location
-               and display to the use with the help of promises and async
-            
-            </p> -->
 
           </div>
 
-          <!-- <div class='thirdProjectContainer'>
 
-            <div class='thirdProject mobileScreen desktopScreen'> -->
-
-<!-- 
-            </div>
-
-              <p>This project here also is the exploration of promises, async and fetch api, 
-              where the api is use to fetch weather data for the user's entered location
-               and display to the use with the help of promises and async
-            
-            </p> 
-
-             <div class='buttons'>
-          <button> <a href='#'>Live Website</a> </button>
-          <button> <a href='#'>View on Github </a> </button>
-        </div>
-
-          </div> -->
 
           
 
@@ -344,8 +314,8 @@
                
                 <div id="circles">
                     <p class="dot first-circle"></p>
-                    <p class="dot second-circle"></p>
-                    <p class="dot third-circle"></p>
+                    <p class="dot second-circle"><a href='https://bright-anyawe.github.io/TOP-Weather-Forecast-Project/' ></a> </p>
+                    <p class="dot third-circle"> <a href='https://bright-anyawe.github.io/TOP-Weather-Forecast-Project/'></a></p>
                 </div>
             </div>
 
@@ -376,19 +346,22 @@
           break to leave a message below
       </div>
 
-      <form class='formEl mobileFormContainer'>
+      <form class='formEl mobileFormContainer' action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="ec323071-c9a1-48e4-9bba-87c32ecc2b27">
+
         <label for="name"> Name</label>
-        <input type='text' class='mobileNameInputEl' id="name"  placeholder='Name'>
+        <input type='text' name='Name' class='mobileNameInputEl' id="name"  placeholder='Name'>
 
         <label for="email"> Email</label>
-        <input type='email' class='mobileEmailInputEl' id="email" placeholder='Email'>
+        <input type='email' name='Email' class='mobileEmailInputEl' id="email" placeholder='Email'>
 
         <label for="messageMe"> Message</label>
-        <textarea class='mobileTextAreaInputEl'id='messageMe' placeholder='Message'> </textarea>
+        <textarea name='Message'class='mobileTextAreaInputEl'id='messageMe' placeholder='Message'> </textarea>
 
         <div class='sendBtnContainer mobileSendBtnContainer'>
 
-          <button class='submit mobileSubmitInputEl'  >
+          <button type='submit' class='submit mobileSubmitInputEl'  >
             <p>Send</p>
             <p> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>send-outline</title><path d="M4 6.03L11.5 9.25L4 8.25L4 6.03M11.5 14.75L4 17.97V15.75L11.5 14.75M2 3L2 10L17 12L2 14L2 21L23 12L2 3Z" /></svg></p> </button>
         </div>

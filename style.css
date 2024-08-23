@@ -459,9 +459,10 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+            padding-bottom: 7rem;
   }
 
-  .firstProjectTitle, .secondprojectTitle {
+  .firstprojectTitle, .secondprojectTitle {
     font-size: 1.5rem;
     font-weight: 700;
   }
@@ -477,6 +478,13 @@ a {
     padding: 0 20px;
     text-align: center;
   }
+
+  .firstProjectContainer img {
+            width: 330px;
+        height: auto;
+        object-fit: contain;
+  }
+
 
   .featuredProject .subFeaturedProjectContainer {
     display: flex;
@@ -1117,11 +1125,26 @@ a {
     min-width: 550px;
   }
 
+  div#projectMainContainer {
+    display: block;
+  }
+
   .projectContainer {
     display: flex;
     flex-direction: column;
     gap: 5rem;
   }
+
+  div.projectContainer {
+    display: block;
+    padding-bottom: 8rem;
+  }
+
+      .firstprojectTitle, .secondprojectTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+                text-align: center;
+    }
 
   .firstProject.container p,
   .secondProject.container p,
@@ -1457,8 +1480,25 @@ a {
   }
 
   div#projectMainContainer {
-    display: none;
+    display: block;
   }
+
+  .projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  div.projectContainer {
+    display: block;
+    padding-bottom: 8rem;
+  }
+
+      .firstprojectTitle, .secondprojectTitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+                text-align: center;
+    }
 
   main .otherProjectsContainer {
     display: flex;
