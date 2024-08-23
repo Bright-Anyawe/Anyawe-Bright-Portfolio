@@ -9,6 +9,7 @@ const body = document.querySelector("body");
 const workBtnEl = document.querySelector(".viewWorkBtn"); 
 const toggleTheme = document.querySelector("#toggleThemeModeContainer");
 const bodyEl = document.querySelector('body');
+const form = document.querySelector('form')
 let prevScrollPos = window.scrollY;
 
 window.onscroll = function () {
@@ -25,6 +26,20 @@ window.onscroll = function () {
   }
   prevScrollPos = currentScrollPos;
 };
+
+//Clear form 
+function clearForm() {
+  const nameInput = document.querySelector('#name')
+  const emailInput = document.querySelector('#email')
+  const messageInput = document.querySelector('#messageMe')
+
+  console.log(nameInput)
+  nameInput.value = '';
+  emailInput.value = '';
+  messageInput.value = '';
+
+}
+form.addEventListener('submit', clearForm)
 
 const toggleEl = document.querySelector("#toggleMenuIcon");
 const newSideBar = document.querySelector("#firstSideBarContainer");
