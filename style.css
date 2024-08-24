@@ -620,12 +620,12 @@ a {
     align-items: center;
   }
 
-  .mobileFormContainer input {
-    min-width: 230px;
-    min-height: 25px;
-    max-width: 250px;
-    max-height: 30px;
+  form.mobileFormContainer input {
+    max-width: 300px;
+    max-height: 38px;
     border-radius: 5px;
+    font-size: 1.1rem;
+    min-width: 0;
   }
 
   .mobileTextAreaInputEl {
@@ -633,6 +633,7 @@ a {
     min-width: 229px;
     max-width: 300px;
     border-radius: 5px;
+    font-size: 1.1rem;
   }
 
   .mobileFormContainer>p {
