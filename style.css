@@ -2533,6 +2533,10 @@ svg {
   cursor: pointer;
 }
 
+.socialMediaSvgContainer li a {
+  background-color: inherit;
+}
+
 li.linkedInSvgContainer svg {
   width: 30px;
 
