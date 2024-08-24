@@ -6,10 +6,13 @@ let navLinks = document.querySelector(".sidebar li");
 console.log(navLinks);
 const menuSvg = document.querySelector(".menuSvgContainer");
 const body = document.querySelector("body");
-const workBtnEl = document.querySelector(".viewWorkBtn"); 
+const workBtnEl = document.querySelector(".viewWorkBtn");
 const toggleTheme = document.querySelector("#toggleThemeModeContainer");
-const bodyEl = document.querySelector('body');
-const form = document.querySelector('form')
+const bodyEl = document.querySelector("body");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#messageMe");
+const form = document.querySelector("form");
 let prevScrollPos = window.scrollY;
 
 window.onscroll = function () {
@@ -18,28 +21,38 @@ window.onscroll = function () {
   if (prevScrollPos > currentScrollPos) {
     document.querySelector("nav").style.top = "35px";
     document.querySelector("#toggleMenuIcon").style.top = "30px";
-
   } else {
     document.querySelector("nav").style.top = "-80px";
     document.querySelector("#toggleMenuIcon").style.top = "-80px";
-
   }
   prevScrollPos = currentScrollPos;
 };
 
-//Clear form 
-function clearForm() {
-  const nameInput = document.querySelector('#name')
-  const emailInput = document.querySelector('#email')
-  const messageInput = document.querySelector('#messageMe')
+//Clear form
+async function clearForm(event) {
 
-  console.log(nameInput)
-  nameInput.value = '';
-  emailInput.value = '';
-  messageInput.value = '';
+  // event.preventDefault();
 
+
+  try {
+  
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+    });
+
+    if (response.ok) {
+      
+      form.reset()
+    } else {
+      alert(`Form submission failed: ${response.statusText}`)
+    }
+  } catch (error) {
+    alert('Please check your internet connection!')
+  }
+ 
 }
-form.addEventListener('submit', clearForm)
+form.addEventListener("submit", clearForm);
 
 const toggleEl = document.querySelector("#toggleMenuIcon");
 const newSideBar = document.querySelector("#firstSideBarContainer");
@@ -59,11 +72,10 @@ function toggleMenu() {
 }
 toggleEl.addEventListener("click", toggleMenu);
 
-
 function togglePageBackgroundColor() {
   toggleTheme.classList.toggle("active");
   bodyEl.classList.toggle("active");
-};
+}
 toggleTheme.addEventListener("click", togglePageBackgroundColor);
 
 const dots = document.querySelectorAll(".dot");
@@ -71,7 +83,6 @@ const dots = document.querySelectorAll(".dot");
 const pictureFrame = document.querySelector(".picture-frame");
 const nextEl = document.querySelector(".next");
 const previousEl = document.querySelector("#previous");
-
 
 const images = [
   { src: "asset/image/todo-list image-with-a-person.jpg", alt: "To_Do_List" },
@@ -82,11 +93,9 @@ const images = [
 let currentIndex = 0;
 let slideshowInterval;
 
-
 function displayCurrentImage() {
   pictureFrame.textContent = "";
 
-  
   let toDoImg = document.createElement("img");
   toDoImg.classList.add("toDoImg");
   toDoImg.src = images[currentIndex].src;
@@ -94,7 +103,6 @@ function displayCurrentImage() {
 
   pictureFrame.appendChild(toDoImg);
 
-  
   dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === currentIndex);
   });
@@ -105,12 +113,10 @@ function startSlideshow() {
   slideshowInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     displayCurrentImage();
-  }, 3000); 
+  }, 3000);
 }
 
-
 const displayNextImage = () => {
-  
   currentIndex = (currentIndex + 1) % images.length;
   displayCurrentImage();
   clearInterval(slideshowInterval);
