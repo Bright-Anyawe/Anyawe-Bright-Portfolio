@@ -459,7 +459,7 @@ a {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-            padding-bottom: 7rem;
+    padding-bottom: 7rem;
   }
 
   .firstprojectTitle, .secondprojectTitle {
@@ -480,9 +480,9 @@ a {
   }
 
   .firstProjectContainer img {
-            width: 330px;
-        height: auto;
-        object-fit: contain;
+    width: 330px;
+    height: auto;
+    object-fit: contain;
   }
 
 
@@ -559,6 +559,16 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  #projectMainContainer button {
+    padding: 6px;
+
+  }
+
+  #projectMainContainer button a {
+    font-size: 1.3rem;
+  }
+
 
   .secondProject img {
     width: 330px;
@@ -1140,11 +1150,11 @@ a {
     padding-bottom: 8rem;
   }
 
-      .firstprojectTitle, .secondprojectTitle {
-        font-size: 1.5rem;
-        font-weight: 700;
-                text-align: center;
-    }
+  .firstprojectTitle, .secondprojectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
 
   .firstProject.container p,
   .secondProject.container p,
@@ -1494,11 +1504,11 @@ a {
     padding-bottom: 8rem;
   }
 
-      .firstprojectTitle, .secondprojectTitle {
-        font-size: 1.5rem;
-        font-weight: 700;
-                text-align: center;
-    }
+  .firstprojectTitle, .secondprojectTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
 
   main .otherProjectsContainer {
     display: flex;
@@ -1779,7 +1789,7 @@ nav a {
 .greetingTextContainer h2 {
   margin: 0 0 20px;
   font-size: 20px;
-  color: rgb(34, 29, 29);
+  /* color: white; */
   font-weight: 500;
 }
 
@@ -2267,6 +2277,7 @@ span {
   margin: 5px 0 15px 0;
 }
 
+
 .projectContainer {
   display: none;
   gap: 1rem;
@@ -2353,7 +2364,15 @@ img {
   height: 20px;
   border-radius: 50%;
   background-color: yellow;
+  text-align: center;
   cursor: pointer;
+}
+
+.dot a {
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
 }
 
 .dot.active {
