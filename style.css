@@ -762,6 +762,10 @@ a {
     padding: 0 20px;
   }
 
+  .socialMediaSvgContainer li a {
+    background-color: inherit;
+  }
+
   .socialMediaEl ul {
     display: flex;
     flex-wrap: wrap;
@@ -1237,6 +1241,10 @@ a {
     padding: 0;
   }
 
+  .socialMediaSvgContainer li a {
+    background-color: inherit;
+  }
+
   .firstHLine,
   .secondHLine {
     display: none;
@@ -1492,6 +1500,10 @@ a {
 
   div#projectMainContainer {
     display: block;
+  }
+
+  .socialMediaSvgContainer li a {
+    background-color: inherit;
   }
 
   .projectContainer {
